@@ -1,0 +1,5 @@
+the python programming language reconciles many apparent contradictions:
+both elegant and pragmatic, both simple and powerful,
+it's very high-level yet doesn't get
+in your way when you need to fiddle with bits and bytes,
+and it's suitable for programming novices as well as programming experts
