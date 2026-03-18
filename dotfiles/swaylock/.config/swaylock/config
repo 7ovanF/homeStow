@@ -1,0 +1,59 @@
+# ~/.config/swaylock/config
+# Clean minimal theme (vanilla swaylock)
+# Made entirely by ChatGPT lmao
+
+ignore-empty-password
+show-failed-attempts
+daemonize
+
+# Background
+image=~/Pictures/Wallpapers/storm.jpg
+scaling=fill
+
+# Indicator shape
+indicator-radius=110
+indicator-thickness=10
+indicator-caps-lock
+
+# Ring (idle)
+inside-color=00000055
+ring-color=2ecbd1cc
+line-color=00000000
+separator-color=00000000
+
+# Ring (verifying)
+inside-ver-color=00000055
+ring-ver-color=5ffaffff
+line-ver-color=00000000
+
+# Ring (wrong password)
+inside-wrong-color=00000055
+ring-wrong-color=ff6b7acc
+line-wrong-color=00000000
+
+# Ring (cleared)
+inside-clear-color=00000055
+ring-clear-color=2ecbd199
+line-clear-color=00000000
+
+# Key highlight
+key-hl-color=5ffaffff
+bs-hl-color=ff6b7aff
+
+# Text
+font=SpaceMono Nerd Font
+text-color=d6dde2ff
+text-clear-color=d6dde2ff
+text-ver-color=5ffaffff
+text-wrong-color=ff6b7acc
+
+# Clock
+clock
+timestr=%H:%M
+datestr=%a, %d %b
+
+timestr-color=d6dde2ff
+datestr-color=d6dde299
+
+# Animation
+fade-in=0.2

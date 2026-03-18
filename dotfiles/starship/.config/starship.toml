@@ -1,0 +1,71 @@
+add_newline = true
+# format = "$directory$git_branch$character"
+
+[directory]
+truncation_length = 8
+truncate_to_repo = true
+format = '[{ $path }](bold cyan) '
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[\\[x_x\\]](bold red)"
+
+[username]
+style_user = 'blue bold'
+style_root = 'black bold'
+format = '[\[$user\]]($style) - '
+disabled = false
+show_always = true
+
+[cmd_duration]
+format = '[| $duration](bold yellow)'
+
+
+# -------------------------
+# GIT BRANCH
+# -------------------------
+[git_branch]
+format = "[@git $symbol$branch(:$remote_branch)]($style) "
+style = "bold purple"
+truncation_length = 40
+truncation_symbol = "..."
+
+always_show_remote = true
+
+
+# -------------------------
+# GIT STATUS
+# -------------------------
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "red"
+
+# ahead / behind indicators
+ahead = "AHEAD:${count}"
+behind = "BEHIND:${count}"
+diverged = "D A:${ahead_count} B:${behind_count}"
+
+# file state indicators
+staged = "\\[+${count}\\]"
+modified = "\\[~${count}\\]"
+deleted = "\\[-${count}\\]"
+untracked = "\\[?${count}\\]"
+conflicted = "\\[O_O${count}\\]"
+stashed = "\\[*${count}\\]"
+
+# -------------------------
+# GIT COMMIT (DETACHED HEAD)
+# -------------------------
+[git_commit]
+format = "[($hash$tag)]($style) "
+commit_hash_length = 7
+tag_symbol = " tag:"
+style = "yellow"
+
+
+# -------------------------
+# GIT STATE (merge/rebase/etc)
+# -------------------------
+[git_state]
+format = '([$state $progress_current/$progress_total]($style)) '
+style = "bright-black"
