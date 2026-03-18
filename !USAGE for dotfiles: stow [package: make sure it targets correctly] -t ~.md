@@ -10,5 +10,3 @@ stow dotfiles/*
 cd dotfiles
 stow nvim fish -t ~
 ```
-```
-```
