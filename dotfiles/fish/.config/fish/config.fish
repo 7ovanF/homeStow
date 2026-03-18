@@ -15,7 +15,7 @@ if status is-interactive
     alias goldberg 'cd /run/media/waldstein/GoldBerg'
     alias info 'info --vi-keys'
     # logs stuff
-    alias todo 'nvim ~/logs/todolist.txt'
+    alias todo 'nvim ~/logs/todolist.md'
     alias logs 'cd ~/logs'
     alias newlog 'nvim $(date +%F).md'
     # notul (specially fuck you)
