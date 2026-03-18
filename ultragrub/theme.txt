@@ -15,7 +15,7 @@ terminal-border: "0"
   left = 4%
   width = 52%
   height = 70%
-  text = "--MENU--"
+  text = "--GNU GRUB--"
   font = "ultrafont Regular 64"
   color = "#ffffff"
   align = "center"
