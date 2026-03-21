@@ -146,6 +146,10 @@ for_window [app_id="wiremix"] floating enable
 for_window [app_id="wiremix"] resize set width 800 height 500
 for_window [app_id="wiremix"] move position center
 
+# Notification center (swaync)
+exec swaync
+bindsym $mod+n exec swaync-client -t -sw
+
 # Include other default sawy modules
 include /etc/sway/config.d/*
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
