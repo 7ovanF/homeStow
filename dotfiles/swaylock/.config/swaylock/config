@@ -7,7 +7,7 @@ show-failed-attempts
 daemonize
 
 # Background
-image=~/Pictures/Wallpapers/storm.jpg
+image=~/Pictures/Wallpapers/lake-with-naiads.jpg
 scaling=fill
 
 # Indicator shape
