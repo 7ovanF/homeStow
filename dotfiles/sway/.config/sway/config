@@ -1,6 +1,8 @@
 # Basic Settings
 set $mod Mod4
 set $term kitty
+# Wallpaper
+set $wallpaper '~/Pictures/Wallpapers/antibes-yellow-tree-mild.jpg'
 
 # Home row direction keys, like vim
 set $left h
@@ -31,7 +33,7 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 output eDP-1 resolution 1920x1080
 output eDP-1 scale 1.1
 
-output * background '~/Pictures/Wallpapers/sunset.jpg' fill
+output * background $wallpaper fill
 
 exec 'sleep 3; swaymsg workspace 1'
 
