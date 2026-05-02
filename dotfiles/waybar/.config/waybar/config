@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/date-time"],
-    "modules-right": ["custom/scratchpad-indicator", "idle_inhibitor", "sway/language", "pulseaudio", "backlight", "memory", "cpu", "temperature", "custom/network", "battery", "tray"],
+    "modules-right": ["custom/scratchpad-indicator", "idle_inhibitor", "sway/language", "pulseaudio", "backlight", "memory", "cpu", "custom/network", "battery", "tray"],
 
     // Modules configuration
     "sway/workspaces": {
@@ -142,11 +142,11 @@
         "interval": 2,
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
-        "format-ethernet": "",
-        "format-linked": "",
-        "format-disconnected": "",
+        "format-ethernet": "",
+        "format-linked": "󰌷",
+        "format-disconnected": "󰯡",
         //"format-alt": "{ifname}: {ipaddr}/{cidr}",
-        //"on-click": "~/.local/bin/statusbar/network.sh ShowInfo",
+        //"on-click": "~/.config/waybar/statusbar/network.sh ShowInfo",
         "tooltip": true,
         "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}",
         "tooltip-format-wifi": "{essid} {signalStrength}% - {ifname}: {ipaddr}/{cidr}",
@@ -157,9 +157,9 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        //"format-muted": " {format_source}",
-        "format-muted": "婢",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        //"format-muted": " {format_source}",
+        "format-muted": "",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -189,7 +189,7 @@
         "format-text": "{}",
         "return-type": "json",
         "interval": 600,
-        "exec": "~/.local/bin/statusbar/arch-updates.sh 2> /dev/null",
+        "exec": "~/.config/waybar/statusbar/arch-updates.sh 2> /dev/null",
         "exec-if": "exit 0",
         "on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar",
         "signal": 8
@@ -198,20 +198,20 @@
         "format-text": "{}",
         "tooltip": false,
         "interval": 1,
-        "exec": "~/.local/bin/statusbar/date-time.sh",
-        "on-click": "~/.local/bin/statusbar/calendar.sh show"
+        "exec": "~/.config/waybar/statusbar/date-time.sh",
+        // "on-click": "~/.config/waybar/statusbar/calendar.sh show"
     },
     "custom/network": {
         "format-text": "{}",
         "return-type": "json",
         "restart-interval": 1,
-        "exec": "~/.local/bin/statusbar/network.sh 2> /dev/null"
+        "exec": "~/.config/waybar/statusbar/network.sh 2> /dev/null"
     },
     "custom/scratchpad-indicator": {
         "format-text": "{}",
         "return-type": "json",
         "interval": 3,
-        "exec": "~/.local/bin/statusbar/scratchpad-indicator.sh 2> /dev/null",
+        "exec": "~/.config/waybar/statusbar/scratchpad-indicator.sh 2> /dev/null",
         "exec-if": "exit 0",
         "on-click": "swaymsg 'scratchpad show'",
         "on-click-right": "swaymsg 'move scratchpad'"

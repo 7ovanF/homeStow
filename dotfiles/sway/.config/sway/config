@@ -2,7 +2,7 @@
 set $mod Mod4
 set $term kitty
 # Wallpaper
-set $wallpaper '~/Pictures/Wallpapers/antibes-yellow-tree-mild.jpg'
+set $wallpaper '~/Pictures/Wallpapers/cliff_sea.jpg'
 
 # Home row direction keys, like vim
 set $left h
@@ -35,7 +35,7 @@ output eDP-1 scale 1.1
 
 output * background $wallpaper fill
 
-exec 'sleep 3; swaymsg workspace 1'
+# exec 'sleep 3; swaymsg workspace 1'
 
 # Input
 input type:keyboard {
@@ -45,7 +45,7 @@ input type:keyboard {
 }
 # Touchpad & Scroll
 input type:touchpad {
-    pointer_accel 0.28
+    pointer_accel 0.42
     accel_profile adaptive
     tap enabled
     tap_button_map lrm
@@ -54,14 +54,17 @@ input type:touchpad {
     drag_lock disabled
 }
 
-# Bindings
+# === Sway Bindings ===
+# Open Terminal 
 bindsym $mod+Return exec $term
 bindsym Ctrl+Alt+t exec $term
+# Kill Window
 bindsym $mod+q kill
 bindsym Alt+f4 kill
-bindsym $mod+Tab exec rofi -show drun
+# reload configs
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+# swaymsg close
+bindsym $mod+Shift+e exec swaynag -t warning -m 'End sway?' -b 'Yes, exit sway' 'swaymsg exit'
 
 # Focus
 bindsym $mod+$left focus left
@@ -151,6 +154,14 @@ for_window [app_id="wiremix"] move position center
 # Notification center (swaync)
 # exec swaync
 # bindsym $mod+n exec swaync-client -t -sw
+
+# rofi
+bindsym $mod+Tab exec rofi -show drun
+# clipse (clipboard)
+exec clipse -listen
+for_window [app_id="clipse"] floating enable, move position center, resize set 80ppt 80ppt # style window to look nice
+bindsym $mod+v exec $term --class clipse -e clipse                               # bind floating shell with clipse TUI
+
 
 # i think mako doesnt need a start... lmao
 
