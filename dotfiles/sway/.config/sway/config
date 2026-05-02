@@ -10,8 +10,7 @@ set $down j
 set $up k
 set $right l
 
-
-# Visual
+# === Visual Theme ===
 gaps inner 8
 
 font pango:Liberation Mono 9
@@ -29,7 +28,7 @@ client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
-# Display
+# === Display ===
 output eDP-1 resolution 1920x1080
 output eDP-1 scale 1.1
 
@@ -37,7 +36,8 @@ output * background $wallpaper fill
 
 # exec 'sleep 3; swaymsg workspace 1'
 
-# Input
+# === Input ===
+# Keyboard
 input type:keyboard {
     xkb_layout pl
     repeat_delay 280
@@ -146,22 +146,24 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# === Custom Programs ===
 # Specifically for wiremix
 for_window [app_id="wiremix"] floating enable
 for_window [app_id="wiremix"] resize set width 800 height 500
 for_window [app_id="wiremix"] move position center
 
 # Notification center (swaync)
-# exec swaync
-# bindsym $mod+n exec swaync-client -t -sw
+exec swaync
+bindsym $mod+n exec swaync-client -t -sw
 
 # rofi
 bindsym $mod+Tab exec rofi -show drun
 # clipse (clipboard)
 exec clipse -listen
-for_window [app_id="clipse"] floating enable, move position center, resize set 80ppt 80ppt # style window to look nice
+for_window [app_id="clipse"] floating enable
+for_window [app_id="clipse"] resize set width 800 height 500
+for_window [app_id="clipse"] move position center
 bindsym $mod+v exec $term --class clipse -e clipse                               # bind floating shell with clipse TUI
-
 
 # i think mako doesnt need a start... lmao
 

@@ -19,7 +19,7 @@ vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
 vim.opt.mouse = ""
 
 -- Indent is 4 spaces
-vim.opt.tabstop = 4         -- A TAB character looks like 4 spaces
-vim.opt.shiftwidth = 4      -- Number of spaces inserted when indenting
-vim.opt.expandtab = true    -- Pressing the TAB key will insert spaces instead of a TAB character
-vim.opt.autoindent = true   -- Enable automatic indentation
+vim.opt.tabstop = 4 -- A TAB character looks like 4 spaces
+vim.opt.shiftwidth = 4 -- Number of spaces inserted when indenting
+vim.opt.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
+vim.opt.autoindent = true -- Enable automatic indentation
