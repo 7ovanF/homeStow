@@ -2,7 +2,7 @@
 set $mod Mod4
 set $term kitty
 # Wallpaper
-set $wallpaper '~/Pictures/Wallpapers/cliff_sea.jpg'
+set $wallpaper '~/Pictures/Wallpapers/sebastian-svenson-unsplash.jpg'
 
 # Home row direction keys, like vim
 set $left h
