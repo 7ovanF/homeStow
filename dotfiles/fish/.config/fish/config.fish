@@ -44,7 +44,17 @@ if status is-interactive
     # Starship
     starship init fish | source
 
+    # # Slow Fastfetch (replaces command call) (for some reason has no color)
+    # function fastfetch
+    #     set delay 0.05 # seconds per line
+    #
+    #     command fastfetch | while read -l line
+    #         echo $line
+    #         sleep $delay
+    #     end
+    # end
     fastfetch
+
     echo ''
 end
 
