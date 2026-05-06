@@ -142,7 +142,7 @@ label:focus {
 }
 
 #custom-network {
-    color: #a0f1f1;
+    color: #80d1f1;
 }
 
 #network.disconnected {
@@ -150,7 +150,7 @@ label:focus {
 }
 
 #pulseaudio {
-    color: #a0f1f1;
+    color: #f9b168;
 }
 
 /*#pulseaudio.muted {

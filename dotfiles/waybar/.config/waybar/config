@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/date-time"],
-    "modules-right": ["custom/scratchpad-indicator", "idle_inhibitor", "pulseaudio", "backlight", "memory", "cpu", "custom/network", "battery", "tray"],
+    "modules-right": ["custom/scratchpad-indicator", "idle_inhibitor", "backlight", "pulseaudio", "cpu", "memory", "custom/network", "battery", "tray"],
 
     // Modules configuration
     "sway/workspaces": {
