@@ -263,7 +263,6 @@
    ========================================================= */
 .widget-title {
   margin-bottom: var(--gap);
-  border: var(--border);
 }
 
 .widget-title > * {
