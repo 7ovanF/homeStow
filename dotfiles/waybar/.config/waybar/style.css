@@ -97,7 +97,9 @@ window#waybar {
 }
 
 #battery.charging, #battery.plugged {
-    color: #7bfc93;
+    /* color: #7bfc93; */
+    color: #ffffff;
+    background-color: #5bdc73;
 }
 
 @keyframes blink {

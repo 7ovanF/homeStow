@@ -15,7 +15,7 @@ gaps inner 8
 
 font pango:Liberation Mono 9
 
-default_border pixel 2
+default_border pixel 1
 
 set $cl_high #2ecbd1
 set $cl_indi #2ecbd1
