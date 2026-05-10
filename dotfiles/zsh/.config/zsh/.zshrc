@@ -1,6 +1,6 @@
-# ~/.zshrc
+# .zshrc
 
-# Prompt
+# === Prompt ===
 autoload -Uz colors && colors
 # PROMPT='%n@%m %F{blue}%~%f > ' # ah yeah, starship
 
@@ -63,7 +63,7 @@ if [[ $- == *i* ]]; then
     # ===========
     # ZSH PLUGINS
     # ===========
-    plugin_dir="$HOME/.config/zsh"
+    plugin_dir="$HOME/.config/zsh/plugins"
 
     source "$plugin_dir/zsh-autosuggestions/zsh-autosuggestions.zsh"
     source "$plugin_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
