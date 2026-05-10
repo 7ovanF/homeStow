@@ -22,7 +22,6 @@ if status is-interactive
     alias notul 'nvim ~/Notul/$(date +%F).txt'
     # Execution
     alias conserve '~/.local/bin/conserve.sh'
-    alias mars 'java -jar ~/Downloads/Packages/Mars4_5.jar & disown'
 
     # Auto-init ssh (only if hasn't)
     if not pgrep -u (id -u) ssh-agent >/dev/null
