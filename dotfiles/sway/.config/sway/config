@@ -50,7 +50,15 @@ input type:touchpad {
     tap enabled
     tap_button_map lrm
     natural_scroll enabled
-    dwt enabled
+    dwt enabled # you dont need this for touchpads
+    drag_lock disabled
+}
+# Mouse
+input type:pointer {
+    pointer_accel -0.22
+    accel_profile adaptive
+    natural_scroll disabled
+    dwt disabled
     drag_lock disabled
 }
 

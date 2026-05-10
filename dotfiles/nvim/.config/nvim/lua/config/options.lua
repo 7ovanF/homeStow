@@ -13,3 +13,6 @@ vim.opt.autoindent = true -- Enable automatic indentation
 
 -- Extra Controls
 vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true })
+
+-- Disable clipboard being completely integrated to yank registers
+vim.opt.clipboard = ""
