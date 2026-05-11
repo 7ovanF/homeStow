@@ -45,7 +45,7 @@ input type:keyboard {
 }
 # Touchpad & Scroll
 input type:touchpad {
-    pointer_accel 0.42
+    pointer_accel 0.32
     accel_profile adaptive
     tap enabled
     tap_button_map lrm

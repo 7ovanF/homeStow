@@ -151,6 +151,10 @@ label:focus {
     background-color: #f53c3c;
 }
 
+#custom-scratchpad-indicator {
+    color: #cccccc;
+}
+
 #pulseaudio {
     color: #f9b168;
 }

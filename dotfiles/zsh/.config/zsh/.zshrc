@@ -46,11 +46,11 @@ if [[ $- == *i* ]]; then
     }
 
     # === SSH agent auto-init ===
-    if ! pgrep -u "$(id -u)" ssh-agent >/dev/null; then
-        eval "$(ssh-agent -s)" >/dev/null
-
-        print -P "%B%F{magenta}Started the SSH Agent.%f%b"
-    fi
+    # if ! pgrep -u "$(id -u)" ssh-agent >/dev/null; then
+    #     eval "$(ssh-agent -s)" >/dev/null
+    #
+    #     print -P "%B%F{magenta}Started the SSH Agent.%f%b"
+    # fi
     # if ! pgrep -u "$(id -u)" ssh-agent >/dev/null; then
     #     ssh-agent > ~/.ssh/agent.env
     #     source ~/.ssh/agent.env >/dev/null
