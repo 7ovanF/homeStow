@@ -1,5 +1,8 @@
 # ~/.zshenv
 
+# Also have ~/.local/bin as a valid path
+export PATH="$HOME/.local/bin:$PATH"
+
 # Avoid home clutter!
 export ZDOTDIR="$HOME/.config/zsh"
 

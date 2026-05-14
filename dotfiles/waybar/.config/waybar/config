@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/date-time"],
-    "modules-right": ["custom/scratchpad-indicator", "custom/wvkbd-toggle", "idle_inhibitor", "backlight", "pulseaudio", "cpu", "memory", "custom/network", "battery", "tray"],
+    "modules-right": ["custom/scratchpad-indicator", "custom/wvkbd-toggle", "idle_inhibitor", "backlight", "pulseaudio", "cpu", "memory", "custom/network", "custom/battery-conserve", "battery", "tray"],
 
     // Modules configuration
     "sway/workspaces": {
@@ -137,6 +137,13 @@
     },
     "battery#bat2": {
         "bat": "BAT2"
+    },
+    "custom/battery-conserve": {
+        "format-text": "{}",
+        "return-type": "json",
+        "interval": 5,
+        "exec": "~/.config/waybar/statusbar/battery-conserve-status.sh 2> /dev/null",
+        // "on-click": "conserve 2> /dev/null", // needs sudo...
     },
     "network": {
         "interval": 2,

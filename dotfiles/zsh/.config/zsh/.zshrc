@@ -38,7 +38,7 @@ if [[ $- == *i* ]]; then
     alias notul='nvim ~/Notul/$(date +%F).txt'
 
     # Execution
-    alias conserve="$HOME/.local/bin/conserve.sh"
+    # alias conserve="$HOME/.local/bin/conserve.sh"
 
     # batman!
     mann() {
