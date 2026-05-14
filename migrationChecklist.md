@@ -1,8 +1,8 @@
 # Migration Checklist
 ## Browsers
-- Firefox
-- Waterfox (linux and cybersec)
-- Floorp (gradient blue and red) 
+- Firefox (linux n cybersec)
+- Waterfox (ui)
+- Floorp (personal)
 - Lynx
 (consider other browsers)
 

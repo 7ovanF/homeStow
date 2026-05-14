@@ -1,0 +1,8 @@
+NAME                                          MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+zram0                                         251:0    0   7.3G  0 disk  [SWAP]
+nvme0n1                                       259:0    0 476.9G  0 disk  
+├─nvme0n1p1                                   259:1    0   600M  0 part  /boot/efi
+├─nvme0n1p2                                   259:2    0     2G  0 part  /boot
+└─nvme0n1p3                                   259:3    0 474.4G  0 part  
+  └─luks-a791ed8c-e6df-40c5-b6d0-87a7f0f47adf 252:0    0 474.3G  0 crypt /home
+                                                                         /

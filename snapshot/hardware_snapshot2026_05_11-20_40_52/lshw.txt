@@ -1,0 +1,619 @@
+hammerklavier
+    description: Convertible
+    product: 82HS (LENOVO_MT_82HS_BU_idea_FM_IdeaPad Flex 5 14ITL05)
+    vendor: LENOVO
+    version: IdeaPad Flex 5 14ITL05
+    serial: R91068D0
+    width: 64 bits
+    capabilities: smbios-3.2.0 dmi-3.2.0 smp vsyscall32
+    configuration: administrator_password=disabled boot=normal chassis=convertible family=IdeaPad Flex 5 14ITL05 frontpanel_password=disabled keyboard_password=disabled power-on_password=disabled sku=LENOVO_MT_82HS_BU_idea_FM_IdeaPad Flex 5 14ITL05 uuid=c58de296-221f-11eb-916a-30c9ab98e60c
+  *-core
+       description: Motherboard
+       product: LNVNB161216
+       vendor: LENOVO
+       physical id: 0
+       version: SDK0Q55726 WIN
+       serial: R91068D0
+       slot: Part Component
+     *-memory
+          description: System Memory
+          physical id: 0
+          slot: System board or motherboard
+          size: 8GiB
+        *-bank:0
+             description: SODIMM DDR4 Synchronous 3200 MHz (0.3 ns)
+             product: M471A5244CB0-CWE
+             vendor: Samsung
+             physical id: 0
+             serial: 00000000
+             slot: Controller0-ChannelA
+             size: 4GiB
+             width: 64 bits
+             clock: 3200MHz (0.3ns)
+        *-bank:1
+             description: [empty]
+             physical id: 1
+             slot: Controller0-ChannelB-DIMM0
+        *-bank:2
+             description: [empty]
+             physical id: 2
+             slot: Controller0-ChannelC-DIMM0
+        *-bank:3
+             description: [empty]
+             physical id: 3
+             slot: Controller0-ChannelD-DIMM0
+        *-bank:4
+             description: SODIMM DDR4 Synchronous 3200 MHz (0.3 ns)
+             product: M471A5244CB0-CWE
+             vendor: Samsung
+             physical id: 4
+             serial: 00000000
+             slot: Controller1-ChannelA
+             size: 4GiB
+             width: 64 bits
+             clock: 3200MHz (0.3ns)
+        *-bank:5
+             description: [empty]
+             physical id: 5
+             slot: Controller1-ChannelB-DIMM0
+        *-bank:6
+             description: [empty]
+             physical id: 6
+             slot: Controller1-ChannelC-DIMM0
+        *-bank:7
+             description: [empty]
+             physical id: 7
+             slot: Controller1-ChannelD-DIMM0
+     *-cache:0
+          description: L1 cache
+          physical id: 10
+          slot: L1 Cache
+          size: 192KiB
+          capacity: 192KiB
+          capabilities: synchronous internal write-back data
+          configuration: level=1
+     *-cache:1
+          description: L1 cache
+          physical id: 11
+          slot: L1 Cache
+          size: 128KiB
+          capacity: 128KiB
+          capabilities: synchronous internal write-back instruction
+          configuration: level=1
+     *-cache:2
+          description: L2 cache
+          physical id: 12
+          slot: L2 Cache
+          size: 5MiB
+          capacity: 5MiB
+          capabilities: synchronous internal write-back unified
+          configuration: level=2
+     *-cache:3
+          description: L3 cache
+          physical id: 13
+          slot: L3 Cache
+          size: 8MiB
+          capacity: 8MiB
+          capabilities: synchronous internal write-back unified
+          configuration: level=3
+     *-cpu
+          description: CPU
+          product: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+          vendor: Intel Corp.
+          physical id: 14
+          bus info: cpu@0
+          version: 6.140.1
+          serial: To Be Filled By O.E.M.
+          slot: U3E1
+          size: 1262MHz
+          capacity: 2400MHz
+          width: 64 bits
+          clock: 100MHz
+          capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l2 cdp_l2 ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect md_clear ibt flush_l1d arch_capabilities cpufreq
+          configuration: cores=4 enabledcores=4 microcode=190 threads=8
+     *-firmware
+          description: BIOS
+          vendor: LENOVO
+          physical id: 15
+          version: FXCN31WW
+          date: 07/30/2021
+          size: 128KiB
+          capacity: 16MiB
+          capabilities: pci upgrade shadowing cdboot bootselect edd int5printscreen int9keyboard int14serial int17printer int10video pc98 acpi usb ls120boot zipboot biosbootspecification netboot
+     *-pci
+          description: Host bridge
+          product: Tiger Lake-UP3/H35 4 cores Host Bridge/DRAM Registers
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 01
+          width: 32 bits
+          clock: 33MHz
+        *-display
+             description: VGA compatible controller
+             product: TigerLake-LP GT2 [Iris Xe Graphics]
+             vendor: Intel Corporation
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pciexpress msi pm vga_controller bus_master cap_list rom
+             configuration: driver=i915 latency=0
+             resources: iomemory:600-5ff iomemory:400-3ff irq:149 memory:6000000000-6000ffffff memory:4000000000-400fffffff ioport:4000(size=64) memory:c0000-dffff memory:4010000000-4016ffffff memory:4020000000-40ffffffff
+        *-generic
+             description: Signal processing controller
+             product: TigerLake-LP Dynamic Tuning Processor Participant
+             vendor: Intel Corporation
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msi pm cap_list
+             configuration: driver=proc_thermal latency=0
+             resources: iomemory:600-5ff irq:16 memory:6001100000-600111ffff
+        *-pci:0
+             description: PCI bridge
+             product: 11th Gen Core Processor PCIe Controller
+             vendor: Intel Corporation
+             physical id: 6
+             bus info: pci@0000:00:06.0
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:120 memory:50600000-506fffff
+           *-nvme
+                description: NVMe device
+                product: SAMSUNG MZALQ512HALU-000L2
+                vendor: Samsung Electronics Co Ltd
+                physical id: 0
+                bus info: pci@0000:01:00.0
+                logical name: /dev/nvme0
+                version: AL2QFXV7
+                serial: S4UKNF1N884571
+                width: 64 bits
+                clock: 33MHz
+                capabilities: nvme pm msi pciexpress msix nvm_express bus_master cap_list
+                configuration: driver=nvme latency=0 nqn=nqn.1994-11.com.samsung:nvme:PM991:M.2:S4UKNF1N884571 state=live
+                resources: irq:16 memory:50600000-50603fff
+              *-namespace:0
+                   description: NVMe disk
+                   physical id: 0
+                   logical name: hwmon3
+              *-namespace:1
+                   description: NVMe disk
+                   physical id: 2
+                   logical name: /dev/ng0n1
+              *-namespace:2
+                   description: NVMe disk
+                   physical id: 1
+                   bus info: nvme@0:1
+                   logical name: /dev/nvme0n1
+                   size: 476GiB (512GB)
+                   capabilities: gpt-1.00 partitioned partitioned:gpt
+                   configuration: guid=6776dab5-af75-4a17-99f6-c9a852fe5edf logicalsectorsize=512 sectorsize=512 wwid=eui.002538a801e34f56
+                 *-volume:0
+                      description: Windows FAT volume
+                      vendor: mkfs.fat
+                      physical id: 1
+                      bus info: nvme@0:1,1
+                      logical name: /dev/nvme0n1p1
+                      logical name: /boot/efi
+                      version: FAT32
+                      serial: 8c75-32c2
+                      size: 598MiB
+                      capacity: 599MiB
+                      capabilities: boot fat initialized
+                      configuration: FATs=2 filesystem=fat mount.fstype=vfat mount.options=rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=winnt,errors=remount-ro name=EFI System Partition state=mounted
+                 *-volume:1
+                      description: EXT4 volume
+                      vendor: Linux
+                      physical id: 2
+                      bus info: nvme@0:1,2
+                      logical name: /dev/nvme0n1p2
+                      logical name: /boot
+                      version: 1.0
+                      serial: 5dac3bac-d62a-4bc3-be84-14a99ca5d783
+                      size: 2GiB
+                      capabilities: journaled extended_attributes large_files huge_files dir_nlink 64bit extents ext4 ext2 initialized
+                      configuration: created=2026-02-01 09:21:30 filesystem=ext4 lastmountpoint=/boot modified=2026-05-11 20:14:21 mount.fstype=ext4 mount.options=rw,seclabel,relatime mounted=2026-03-13 07:00:05 state=mounted
+                 *-volume:2
+                      description: EFI partition
+                      physical id: 3
+                      bus info: nvme@0:1,3
+                      logical name: /dev/nvme0n1p3
+                      serial: a791ed8c-e6df-40c5-b6d0-87a7f0f47adf
+                      size: 474GiB
+                      capacity: 474GiB
+                      width: 1472476528 bits
+                      capabilities: encrypted luks initialized
+                      configuration: bits=22947313008 filesystem=luks hash=sha256 version=2
+        *-usb:0
+             description: USB controller
+             product: Tiger Lake-LP Thunderbolt 4 USB Controller
+             vendor: Intel Corporation
+             physical id: d
+             bus info: pci@0000:00:0d.0
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi xhci bus_master cap_list
+             configuration: driver=xhci_hcd latency=0
+             resources: iomemory:600-5ff irq:123 memory:6001140000-600114ffff
+           *-usbhost:0
+                product: xHCI Host Controller
+                vendor: Linux 6.19.14-200.fc43.x86_64 xhci-hcd
+                physical id: 0
+                bus info: usb@1
+                logical name: usb1
+                version: 6.19
+                capabilities: usb-2.00
+                configuration: driver=hub slots=1 speed=480Mbit/s
+           *-usbhost:1
+                product: xHCI Host Controller
+                vendor: Linux 6.19.14-200.fc43.x86_64 xhci-hcd
+                physical id: 1
+                bus info: usb@2
+                logical name: usb2
+                version: 6.19
+                capabilities: usb-3.10
+                configuration: driver=hub slots=4 speed=10000Mbit/s
+        *-communication:0
+             description: Serial controller
+             product: 500 Series Chipset Family On-Package Integrated Sensor Hub
+             vendor: Intel Corporation
+             physical id: 12
+             bus info: pci@0000:00:12.0
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm 8250 bus_master cap_list
+             configuration: driver=intel_ish_ipc latency=0
+             resources: iomemory:600-5ff irq:16 memory:6001130000-600113ffff
+        *-usb:1
+             description: USB controller
+             product: 500 Series Chipset Family On-Package USB 3.2 Gen 2x1 (10 Gbs) xHCI Host Controller
+             vendor: Intel Corporation
+             physical id: 14
+             bus info: pci@0000:00:14.0
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi xhci cap_list
+             configuration: driver=xhci_hcd latency=0
+             resources: iomemory:600-5ff irq:131 memory:6001120000-600112ffff
+           *-usbhost:0
+                product: xHCI Host Controller
+                vendor: Linux 6.19.14-200.fc43.x86_64 xhci-hcd
+                physical id: 0
+                bus info: usb@3
+                logical name: usb3
+                version: 6.19
+                capabilities: usb-2.00
+                configuration: driver=hub slots=12 speed=480Mbit/s
+              *-usb:0
+                   description: Video
+                   product: Integrated Camera
+                   vendor: Generic
+                   physical id: 5
+                   bus info: usb@3:5
+                   version: 0.08
+                   serial: 200901010001
+                   capabilities: usb-2.01
+                   configuration: driver=uvcvideo maxpower=500mA speed=480Mbit/s
+              *-usb:1 UNCLAIMED
+                   description: Generic USB device
+                   vendor: Synaptics, Inc.
+                   physical id: 8
+                   bus info: usb@3:8
+                   version: 0.00
+                   serial: 59998ff14e26
+                   capabilities: usb-2.00
+                   configuration: maxpower=100mA speed=12Mbit/s
+              *-usb:2
+                   description: Bluetooth wireless interface
+                   product: Bluetooth Radio
+                   vendor: Realtek
+                   physical id: a
+                   bus info: usb@3:a
+                   version: 0.00
+                   serial: 00e04c000001
+                   capabilities: bluetooth usb-1.00
+                   configuration: driver=btusb maxpower=500mA speed=12Mbit/s
+           *-usbhost:1
+                product: xHCI Host Controller
+                vendor: Linux 6.19.14-200.fc43.x86_64 xhci-hcd
+                physical id: 1
+                bus info: usb@4
+                logical name: usb4
+                version: 6.19
+                capabilities: usb-3.10
+                configuration: driver=hub slots=4 speed=10000Mbit/s
+        *-memory UNCLAIMED
+             description: RAM memory
+             product: 500 Series Chipset Family On-Package Shared SRAM
+             vendor: Intel Corporation
+             physical id: 14.2
+             bus info: pci@0000:00:14.2
+             version: 20
+             width: 64 bits
+             clock: 33MHz (30.3ns)
+             capabilities: pm cap_list
+             configuration: latency=0
+             resources: iomemory:600-5ff iomemory:600-5ff memory:6001154000-6001157fff memory:600115c000-600115cfff
+        *-serial:0
+             description: Serial bus controller
+             product: 500 Series Chipset Family On-Package I2C Controller #0
+             vendor: Intel Corporation
+             physical id: 15
+             bus info: pci@0000:00:15.0
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=intel-lpss latency=0
+             resources: irq:27 memory:600115b000-600115bfff
+        *-serial:1
+             description: Serial bus controller
+             product: 500 Series Chipset Family On-Package I2C Controller #1
+             vendor: Intel Corporation
+             physical id: 15.1
+             bus info: pci@0000:00:15.1
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=intel-lpss latency=0
+             resources: irq:40 memory:600115a000-600115afff
+        *-communication:1
+             description: Communication controller
+             product: 500 Series Chipset Family On-Package CSME HECI #1
+             vendor: Intel Corporation
+             physical id: 16
+             bus info: pci@0000:00:16.0
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list
+             configuration: driver=mei_me latency=0
+             resources: iomemory:600-5ff irq:140 memory:6001159000-6001159fff
+        *-pci:1
+             description: PCI bridge
+             product: 500 Series Chipset Family On-Package PCI Express Root Port #7
+             vendor: Intel Corporation
+             physical id: 1c
+             bus info: pci@0000:00:1c.0
+             version: 20
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:121 memory:50500000-505fffff
+           *-generic
+                description: MMC Host
+                product: RTS522A PCI Express Card Reader
+                vendor: Realtek Semiconductor Co., Ltd.
+                physical id: 0
+                bus info: pci@0000:02:00.0
+                logical name: mmc0
+                version: 01
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress bus_master cap_list
+                configuration: driver=rtsx_pci latency=0
+                resources: irq:139 memory:50500000-50500fff
+        *-pci:2
+             description: PCI bridge
+             product: 500 Series Chipset Family On-Package PCI Express Root Port #8
+             vendor: Intel Corporation
+             physical id: 1c.7
+             bus info: pci@0000:00:1c.7
+             version: 20
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:122 ioport:3000(size=4096) memory:50400000-504fffff
+           *-network
+                description: Ethernet interface
+                product: RTL8822CE 802.11ac PCIe Wireless Network Adapter
+                vendor: Realtek Semiconductor Co., Ltd.
+                physical id: 0
+                bus info: pci@0000:03:00.0
+                logical name: wlp3s0
+                version: 00
+                serial: ae:ca:eb:71:79:e2
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress bus_master cap_list ethernet physical
+                configuration: broadcast=yes driver=rtw88_8822ce driverversion=6.19.14-200.fc43.x86_64 firmware=N/A ip=192.168.88.166 latency=0 link=yes multicast=yes
+                resources: irq:153 ioport:3000(size=256) memory:50400000-5040ffff
+        *-isa
+             description: ISA bridge
+             product: 500 Series Chipset Family On-Package eSPI Controller
+             vendor: Intel Corporation
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 20
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+           *-pnp00:00
+                product: PnP device PNP0c02
+                physical id: 0
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:01
+                product: PnP device PNP0303
+                physical id: 1
+                capabilities: pnp
+                configuration: driver=i8042 kbd
+           *-pnp00:02
+                product: PnP device PNP0c02
+                physical id: 2
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:03
+                product: PnP device PNP0c02
+                physical id: 3
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:04
+                product: PnP device PNP0c02
+                physical id: 4
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:05
+                product: PnP device PNP0c02
+                physical id: 5
+                capabilities: pnp
+                configuration: driver=system
+           *-input
+                product: Ideapad extra buttons
+                physical id: 6
+                logical name: input16
+                logical name: /dev/input/event8
+                capabilities: platform
+        *-multimedia
+             description: Multimedia audio controller
+             product: 500 Series Chipset Family On-Package High Definition Audio (HD Audio)
+             vendor: Intel Corporation
+             physical id: 1f.3
+             bus info: pci@0000:00:1f.3
+             logical name: card0
+             logical name: /dev/snd/controlC0
+             logical name: /dev/snd/hwC0D0
+             logical name: /dev/snd/hwC0D2
+             logical name: /dev/snd/pcmC0D0c
+             logical name: /dev/snd/pcmC0D0p
+             logical name: /dev/snd/pcmC0D31p
+             logical name: /dev/snd/pcmC0D3p
+             logical name: /dev/snd/pcmC0D4p
+             logical name: /dev/snd/pcmC0D5p
+             logical name: /dev/snd/pcmC0D6c
+             logical name: /dev/snd/pcmC0D7c
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list
+             configuration: driver=sof-audio-pci-intel-tgl latency=64
+             resources: iomemory:600-5ff iomemory:600-5ff irq:154 memory:6001150000-6001153fff memory:6001000000-60010fffff
+        *-serial:2
+             description: SMBus
+             product: 500 Series Chipset Family On-Package System Management Bus (SMBus)
+             vendor: Intel Corporation
+             physical id: 1f.4
+             bus info: pci@0000:00:1f.4
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             configuration: driver=i801_smbus latency=0
+             resources: iomemory:600-5ff irq:16 memory:6001158000-60011580ff ioport:efa0(size=32)
+        *-serial:3
+             description: Serial bus controller
+             product: 500 Series Chipset Family On-Package SPI (flash) Controller
+             vendor: Intel Corporation
+             physical id: 1f.5
+             bus info: pci@0000:00:1f.5
+             version: 20
+             width: 32 bits
+             clock: 33MHz
+             configuration: driver=intel-spi latency=0
+             resources: irq:0 memory:50700000-50700fff
+  *-battery
+       product: Smart Battery
+       vendor: Intel Corp.
+       physical id: 1
+       version: 2008
+       serial: 1.0
+       slot: Rear
+  *-input:0
+       product: Lid Switch
+       physical id: 2
+       logical name: input0
+       logical name: /dev/input/event0
+       capabilities: platform
+  *-input:1
+       product: Power Button
+       physical id: 3
+       logical name: input1
+       logical name: /dev/input/event1
+       capabilities: platform
+  *-input:2
+       product: MSFT0001:00 04F3:3140 Mouse
+       physical id: 4
+       logical name: input10
+       logical name: /dev/input/event3
+       logical name: /dev/input/mouse0
+       capabilities: i2c
+  *-input:3
+       product: MSFT0001:00 04F3:3140 Touchpad
+       physical id: 5
+       logical name: input11
+       logical name: /dev/input/event4
+       logical name: /dev/input/mouse1
+       capabilities: i2c
+  *-input:4
+       product: Wacom HID 5215 Pen
+       physical id: 6
+       logical name: input12
+       logical name: /dev/input/event5
+       logical name: /dev/input/mouse2
+       capabilities: i2c
+  *-input:5
+       product: Wacom HID 5215 Finger
+       physical id: 7
+       logical name: input13
+       logical name: /dev/input/event6
+       logical name: /dev/input/mouse3
+       capabilities: i2c
+  *-input:6
+       product: Video Bus
+       physical id: 8
+       logical name: input15
+       logical name: /dev/input/event7
+       capabilities: platform
+  *-input:7
+       product: Lenovo Yoga Tablet Mode Control switch
+       physical id: 9
+       logical name: input17
+       logical name: /dev/input/event9
+       capabilities: platform
+  *-input:8
+       product: sof-hda-dsp Mic
+       physical id: a
+       logical name: input18
+       logical name: /dev/input/event10
+  *-input:9
+       product: sof-hda-dsp Headphone
+       physical id: b
+       logical name: input19
+       logical name: /dev/input/event11
+  *-input:10
+       product: AT Translated Set 2 keyboard
+       physical id: c
+       logical name: input2
+       logical name: /dev/input/event2
+       logical name: input2::capslock
+       logical name: input2::numlock
+       logical name: input2::scrolllock
+       capabilities: i8042
+  *-input:11
+       product: sof-hda-dsp HDMI/DP,pcm=3
+       physical id: d
+       logical name: input20
+       logical name: /dev/input/event12
+  *-input:12
+       product: sof-hda-dsp HDMI/DP,pcm=4
+       physical id: e
+       logical name: input21
+       logical name: /dev/input/event13
+  *-input:13
+       product: sof-hda-dsp HDMI/DP,pcm=5
+       physical id: f
+       logical name: input22
+       logical name: /dev/input/event14

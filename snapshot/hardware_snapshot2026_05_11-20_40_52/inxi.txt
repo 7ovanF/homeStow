@@ -1,0 +1,87 @@
+System:
+  Kernel: 6.19.14-200.fc43.x86_64 arch: x86_64 bits: 64 compiler: gcc
+    v: 15.2.1 clocksource: tsc
+  Desktop: Sway v: 1.11 with: waybar tools: swayidle vt: 7 dm: SDDM
+    Distro: Fedora Linux 43 (Forty Three)
+Machine:
+  Type: Convertible System: LENOVO product: 82HS v: IdeaPad Flex 5 14ITL05
+    serial: <superuser required> Chassis: type: 31 v: IdeaPad Flex 5 14ITL05
+    serial: <superuser required>
+  Mobo: LENOVO model: LNVNB161216 v: SDK0Q55726 WIN
+    serial: <superuser required> part-nu: LENOVO_MT_82HS_BU_idea_FM_IdeaPad
+    Flex 5 14ITL05 uuid: <superuser required> Firmware: UEFI vendor: LENOVO
+    v: FXCN31WW date: 07/30/2021
+Battery:
+  ID-1: BAT0 charge: 39.1 Wh (74.5%) condition: 52.5/52.5 Wh (100%)
+    power: 5.5 W volts: 12.17 min: 11.52 model: SMP L19M3PD6 type: Li-poly
+    serial: <filter> charging: status: discharging type: fast cycles: 3
+CPU:
+  Info: quad core model: 11th Gen Intel Core i5-1135G7 bits: 64 type: MT MCP
+    smt: enabled arch: Tiger Lake rev: 1 cache: L1: 320 KiB L2: 5 MiB L3: 8 MiB
+  Speed (MHz): avg: 699 min/max: 400/2400 cores: 1: 699 2: 699 3: 699 4: 699
+    5: 699 6: 699 7: 699 8: 699 bogomips: 38707
+  Flags-basic: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3 vmx
+Graphics:
+  Device-1: Intel TigerLake-LP GT2 [Iris Xe Graphics] vendor: Lenovo
+    driver: i915 v: kernel arch: Xe ports: active: eDP-1 empty: DP-1,HDMI-A-1
+    bus-ID: 00:02.0 chip-ID: 8086:9a49 class-ID: 0300
+  Device-2: Syntek Integrated Camera driver: uvcvideo type: USB rev: 2.0
+    speed: 480 Mb/s lanes: 1 bus-ID: 3-5:2 chip-ID: 174f:243f class-ID: 0e02
+    serial: <filter>
+  Display: wayland server: Xwayland v: 24.1.11 compositor: Sway v: 1.11
+    driver: gpu: i915 display-ID: 1
+  Monitor-1: eDP-1 model: LG Display 0x40a9 res: mode: 1920x1080 hz: 60
+    scale: 110% (1.1) to: 1745x981 dpi: 158 size: 309x174mm (12.17x6.85")
+    diag: 355mm (14") modes: 1920x1080
+  API: OpenGL v: 4.6 vendor: intel mesa v: 25.3.6 glx-v: 1.4 es-v: 3.2
+    direct-render: yes renderer: Mesa Intel Iris Xe Graphics (TGL GT2)
+    device-ID: 8086:9a49
+  API: EGL Message: EGL data requires eglinfo. Check --recommends.
+  Info: Tools: api: glxinfo wl: kanshi, swaymsg, wlr-randr x11: xdriinfo,
+    xdpyinfo, xprop, xrandr
+Audio:
+  Device-1: Intel 500 Series Family On-Package High Definition Audio
+    vendor: Lenovo driver: sof-audio-pci-intel-tgl bus-ID: 00:1f.3
+    chip-ID: 8086:a0c8 class-ID: 0401
+  API: ALSA v: k6.19.14-200.fc43.x86_64 status: kernel-api
+  Server-1: PipeWire v: 1.4.11 status: active with: 1: pipewire-pulse
+    status: active 2: wireplumber status: active 3: pipewire-alsa type: plugin
+    4: pw-jack type: plugin
+Network:
+  Device-1: Realtek RTL8822CE 802.11ac PCIe Wireless Network Adapter
+    vendor: Lenovo driver: rtw88_8822ce v: kernel pcie: speed: 2.5 GT/s lanes: 1
+    port: 3000 bus-ID: 03:00.0 chip-ID: 10ec:c822 class-ID: 0280
+  IF: wlp3s0 state: up mac: <filter>
+Bluetooth:
+  Device-1: Realtek Bluetooth Radio driver: btusb v: 0.8 type: USB rev: 1.0
+    speed: 12 Mb/s lanes: 1 bus-ID: 3-10:4 chip-ID: 0bda:c123 class-ID: e001
+    serial: <filter>
+  Report: btmgmt ID: hci0 rfk-id: 4 state: up address: <filter> bt-v: 5.1
+    lmp-v: 10 class-ID: 7c0000
+Drives:
+  Local Storage: total: 476.94 GiB used: 26.96 GiB (5.7%)
+  ID-1: /dev/nvme0n1 vendor: Samsung model: MZALQ512HALU-000L2
+    size: 476.94 GiB speed: 31.6 Gb/s lanes: 4 tech: SSD serial: <filter>
+    fw-rev: AL2QFXV7 temp: 30.9 C scheme: GPT
+Partition:
+  ID-1: / size: 474.34 GiB used: 26.43 GiB (5.6%) fs: btrfs dev: /dev/dm-0
+    mapped: luks-a791ed8c-e6df-40c5-b6d0-87a7f0f47adf
+  ID-2: /boot size: 1.9 GiB used: 531.7 MiB (27.3%) fs: ext4
+    dev: /dev/nvme0n1p2
+  ID-3: /boot/efi size: 598.8 MiB used: 7.5 MiB (1.3%) fs: vfat
+    dev: /dev/nvme0n1p1
+  ID-4: /home size: 474.34 GiB used: 26.43 GiB (5.6%) fs: btrfs
+    dev: /dev/dm-0 mapped: luks-a791ed8c-e6df-40c5-b6d0-87a7f0f47adf
+Swap:
+  ID-1: swap-1 type: zram size: 7.3 GiB used: 0 KiB (0.0%) priority: 100
+    dev: /dev/zram0
+Sensors:
+  System Temperatures: cpu: 37.0 C mobo: N/A
+  Fan Speeds (rpm): N/A
+Info:
+  Memory: total: 8 GiB note: est. available: 7.3 GiB used: 1.33 GiB (18.1%)
+  Processes: 317 Power: uptime: 14m states: freeze,mem suspend: s2idle
+    wakeups: 1 hibernate: disabled Init: systemd v: 258 default: graphical
+  Packages: pm: rpm pkgs: N/A note: see --rpm pm: flatpak pkgs: 16
+    Compilers: gcc: 15.2.1 Shell: snapshot.sh default: Zsh v: 5.9
+    running-in: kitty inxi: 3.3.40
