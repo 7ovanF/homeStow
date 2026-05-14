@@ -60,6 +60,7 @@ window#waybar {
 #custom-date-time,
 #custom-network,
 #custom-scratchpad-indicator,
+#custom-wvkbd-toggle,
 #pulseaudio,
 #custom-media,
 #tray,
@@ -249,4 +250,12 @@ label:focus {
 
 #custom-arch-updates {
     color: #00cc00;
+}
+
+#custom-wvkbd-toggle.off {
+    color: #80b1b1;
+}
+
+#custom-wvkbd-toggle.on {
+    color: #dddddd;
 }

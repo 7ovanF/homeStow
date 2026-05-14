@@ -2,7 +2,7 @@
 set $mod Mod4
 set $term kitty
 # Wallpaper
-set $wallpaper '~/Pictures/Wallpapers/sebastian-svenson-unsplash.jpg'
+set $wallpaper '~/Pictures/Wallpapers/antibes-yellow-tree-mild.jpg'
 
 # Home row direction keys, like vim
 set $left h
@@ -121,7 +121,7 @@ bindsym $mod+Shift+0 move container to workspace number 10; workspace number 10
 
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-bindsym $mod+m fullscreen
+bindsym $mod+f fullscreen
 
 bindsym $mod+Shift+space floating toggle; resize set width 1000 height 800;
 bindsym $mod+space focus mode_toggle
@@ -166,14 +166,13 @@ bindsym $mod+n exec swaync-client -t -sw
 
 # rofi
 bindsym $mod+Tab exec rofi -show drun
+
 # clipse (clipboard)
 exec clipse -listen
 for_window [app_id="clipse"] floating enable
 for_window [app_id="clipse"] resize set width 800 height 500
 for_window [app_id="clipse"] move position center
-bindsym $mod+v exec $term --class clipse -e clipse                               # bind floating shell with clipse TUI
-
-# i think mako doesnt need a start... lmao
+bindsym $mod+v exec $term --class clipse -e clipse
 
 # Include other default sawy modules
 include /etc/sway/config.d/*
