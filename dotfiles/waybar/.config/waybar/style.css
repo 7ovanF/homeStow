@@ -127,10 +127,10 @@ window#waybar {
 }
 
 #custom-battery-conserve.off {
-    color: #c3ffca;
+    color: #80b1b1;
 }
 #custom-battery-conserve.on {
-    color: #f3ff8a;
+    color: #c3ffca;
 }
 
 label:focus {
