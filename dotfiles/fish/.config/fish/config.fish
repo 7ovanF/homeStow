@@ -18,8 +18,8 @@ if status is-interactive
     alias todo 'nvim ~/logs/todolist.md'
     alias logs 'cd ~/logs'
     alias newlog 'nvim $(date +%F).md'
-    # notul (specially fuck you)
-    alias notul 'nvim ~/Notul/$(date +%F).txt'
+    # notul
+    alias notul 'nvim ~/Random/$(date +%F).txt'
     # Execution
     alias conserve '~/.local/bin/conserve.sh'
 

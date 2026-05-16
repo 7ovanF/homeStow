@@ -25,7 +25,7 @@
   --noti-bg-hover: rgba(var(--bg-hover-rgb), var(--bg-alpha));
   --noti-bg-focus: rgba(var(--bg-base-rgb), var(--bg-alpha)));
 
-  --border: 2px solid var(--accent);
+  --border: 1px solid var(--accent);
   --border-subtle: 2px solid rgba(var(--accent-darker-rgb), 0.25);
 
   /* === Typography === */

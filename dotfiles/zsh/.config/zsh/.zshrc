@@ -35,7 +35,7 @@ if [[ $- == *i* ]]; then
     alias newlog='nvim $(date +%F).md'
 
     # Notul
-    alias notul='nvim ~/Notul/$(date +%F).txt'
+    alias notul='nvim ~/Random/$(date +%F).txt'
 
     # Execution
     # alias conserve="$HOME/.local/bin/conserve.sh"
