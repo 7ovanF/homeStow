@@ -16,11 +16,13 @@ autoload -Uz +X compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 _comp_options+=(globdots)
+bindkey '^[[Z' reverse-menu-complete
 
 # === History ===
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
+setopt hist_ignore_all_dups
 
 # === Interactive shell setup ===
 if [[ $- == *i* ]]; then
