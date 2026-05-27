@@ -1,9 +1,9 @@
 {
     // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 24, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "margin": "10, 10, 0, 10", // Top,Left,Bottom,Right
+    "margin": "0, 0, 0, 0", // Top,Left,Bottom,Right
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/date-time"],

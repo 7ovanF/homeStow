@@ -2,7 +2,7 @@
 set $mod Mod4
 set $term kitty
 # Wallpaper
-set $wallpaper '~/Pictures/Wallpapers/antibes-yellow-tree-mild.jpg'
+set $wallpaper '~/Pictures/Wallpapers/sisley-villagelake.webp'
 
 # Home row direction keys, like vim
 set $left h
@@ -11,7 +11,8 @@ set $up k
 set $right l
 
 # === Visual Theme ===
-gaps inner 8
+gaps inner 6
+gaps outer -1
 
 font pango:Liberation Mono 9
 
@@ -32,7 +33,7 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 output eDP-1 resolution 1920x1080
 output eDP-1 scale 1.25
 
-output * background $wallpaper fill
+output * background $wallpaper stretch
 
 # exec 'sleep 3; swaymsg workspace 1'
 
@@ -55,7 +56,7 @@ input type:touchpad {
 }
 # Mouse
 input type:pointer {
-    pointer_accel -0.22
+    pointer_accel -0.55
     accel_profile adaptive
     natural_scroll disabled
     dwt disabled
@@ -180,6 +181,11 @@ for_window [app_id="clipse"] floating enable
 for_window [app_id="clipse"] resize set width 800 height 500
 for_window [app_id="clipse"] move position center
 bindsym $mod+v exec $term --class clipse -e clipse
+
+# blueman-manager (make the window float)
+for_window [app_id="blueman-manager"] floating enable
+for_window [app_id="blueman-manager"] resize set width 900 height 700
+for_window [app_id="blueman-manager"] move position center
 
 # Include other default sawy modules
 include /etc/sway/config.d/*

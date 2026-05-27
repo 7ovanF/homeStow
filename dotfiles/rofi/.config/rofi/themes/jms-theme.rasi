@@ -1,5 +1,5 @@
 * {
-	background-color: #00000050;
+	background-color: #14192570;
 	text-color:       #EFEFEF;
     font: "LiterationMono Nerd Font 10.5";
  
@@ -13,7 +13,7 @@
 
 window {
 	width: 50ch;
-	border: 2px;
+	border: 1px;
 	border-color: #2ecbd1;
   border-radius: 0px;
 	orientation: horizontal;
