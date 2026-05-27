@@ -8,7 +8,7 @@ daemonize
 
 # Background
 image=~/Pictures/Wallpapers/lake-with-naiads.jpg
-scaling=fill
+scaling=stretch
 
 # Indicator shape
 indicator-radius=110
