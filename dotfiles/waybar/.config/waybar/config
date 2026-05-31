@@ -206,7 +206,7 @@
         "tooltip": false,
         "interval": 1,
         "exec": "~/.config/waybar/statusbar/date-time.sh",
-        // "on-click": "~/.config/waybar/statusbar/calendar.sh show"
+        "on-click": "~/.config/waybar/statusbar/date-time-toggle.sh"
     },
     "custom/network": {
         "format-text": "{}",
