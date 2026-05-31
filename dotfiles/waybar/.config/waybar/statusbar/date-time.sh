@@ -13,9 +13,9 @@ STATE_FILE="/tmp/waybar-time-hidden"
 # }
 
 if [ -f "$STATE_FILE" ]; then
-    date=$(date "+%A, %-d %B %Y - %H:%M")
-else
     date=$(date "+%A, %-d %B %Y")
+else
+    date=$(date "+%A, %-d %B %Y - %H:%M")
 fi
 
 icon=""
