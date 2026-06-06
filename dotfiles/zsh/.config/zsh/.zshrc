@@ -1,29 +1,5 @@
 # .zshrc
 
-# === Prompt ===
-autoload -Uz colors && colors
-# PROMPT='%n@%m %F{blue}%~%f > ' # ah yeah, starship
-
-# === KeyBindings ===
-WORDCHARS='' # so that it doesn't skip over symbols
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
-bindkey '^H' backward-kill-word
-
-# === Auto Completion ===
-autoload -Uz +X compinit && compinit
-## case insensitive path-completion
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*' menu select
-_comp_options+=(globdots)
-bindkey '^[[Z' reverse-menu-complete
-
-# === History ===
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history
-setopt hist_ignore_all_dups
-
 # === Interactive shell setup ===
 if [[ $- == *i* ]]; then
 
@@ -38,9 +14,6 @@ if [[ $- == *i* ]]; then
 
     # Notul
     alias notul='nvim ~/Random/$(date +%F).txt'
-
-    # Execution
-    # alias conserve="$HOME/.local/bin/conserve.sh"
 
     # batman!
     mann() {
@@ -70,6 +43,7 @@ if [[ $- == *i* ]]; then
     source "$plugin_dir/zsh-autosuggestions/zsh-autosuggestions.zsh"
     source "$plugin_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
     # ZSH_HIGHLIGHT_HIGHLIGHTERS += (brackets, pattern, regexp, cursor, root, line)
+    source "$plugin_dir/zsh-z/zsh-z.plugin.zsh"
 
     # Starship
     eval "$(starship init zsh)"
@@ -78,6 +52,31 @@ if [[ $- == *i* ]]; then
     fastfetch
     echo
 fi
+
+# === Prompt ===
+autoload -Uz colors && colors
+# PROMPT='%n@%m %F{blue}%~%f > ' # ah yeah, starship
+
+# === KeyBindings ===
+WORDCHARS='' # so that it doesn't skip over symbols
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+bindkey '^H' backward-kill-word
+
+# === Auto Completion ===
+autoload -Uz +X compinit && compinit
+## case insensitive path-completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
+_comp_options+=(globdots)
+bindkey '^[[Z' reverse-menu-complete
+
+# === History ===
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.cache/zsh/history
+setopt hist_ignore_all_dups
+
 
 # Disable icons in TTY
 if [[ "$TERM" == "linux" ]]; then
