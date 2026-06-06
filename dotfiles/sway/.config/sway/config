@@ -31,7 +31,7 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 # === Display ===
 output eDP-1 resolution 1920x1080
-output eDP-1 scale 1.25
+output eDP-1 scale 1.1
 
 output * background $wallpaper stretch
 
@@ -46,7 +46,7 @@ input type:keyboard {
 }
 # Touchpad & Scroll
 input type:touchpad {
-    pointer_accel 0.32
+    pointer_accel 0.42
     accel_profile adaptive
     tap enabled
     tap_button_map lrm
