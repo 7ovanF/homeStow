@@ -21,6 +21,7 @@ window#waybar {
     color: #e0ffff;
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -2px transparent;
+    letter-spacing: 0.2em;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
