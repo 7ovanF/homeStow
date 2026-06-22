@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["custom/date-time"],
-    "modules-right": ["custom/scratchpad-indicator", "custom/wvkbd-toggle", "idle_inhibitor", "backlight", "pulseaudio", "cpu", "memory", "custom/network", "custom/battery-conserve", "battery", "tray"],
+    "modules-right": ["custom/scratchpad-indicator", "custom/wvkbd-toggle", "idle_inhibitor", "backlight", "pulseaudio", "cpu", "memory", "custom/battery-conserve", "battery", "tray"],
 
     // Modules configuration
     "sway/workspaces": {
@@ -96,7 +96,10 @@
     },
     "tray": {
         // "icon-size": 21,
-        "spacing": 10
+        "spacing": 10,
+        // "icons": {
+        //     "blueman": "bluetooth"
+        // }
     },
     "clock": {
         // "timezone": "America/New_York",

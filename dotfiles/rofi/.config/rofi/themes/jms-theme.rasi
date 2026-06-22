@@ -78,11 +78,10 @@ textbox {
 
 element-text {
 	background-color:#00000000;
-	margin-left: 5px;
 }
 
 element-icon {
 	background-color: #00000000;
-    margin-right: 5px;
+    padding: 0 3 0 0;
 }
 
