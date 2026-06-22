@@ -28,8 +28,7 @@
         "dnd",
         "notifications",
 		"mpris",
-		"volume",
-        // "buttons-grid"
+		"volume"
     ],
     "widget-config": {
         "title": {
