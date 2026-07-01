@@ -6,6 +6,7 @@ if [[ $- == *i* ]]; then
     # === Aliases ===
     alias goldberg='cd /run/media/waldstein/GoldBerg'
     alias info='info --vi-keys'
+    alias ls='ls -v --color=auto'
 
     # Logs
     alias todo='nvim ~/logs/todolist.md'

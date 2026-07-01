@@ -1,8 +1,9 @@
 # Basic Settings
 set $mod Mod4
 set $term kitty
+
 # Wallpaper
-set $wallpaper '~/Pictures/Wallpapers/sisley-villagelake.webp'
+set $wallpaper '~/Pictures/Wallpapers/sebastian-svenson-unsplash.jpg'
 
 # Home row direction keys, like vim
 set $left h
@@ -67,101 +68,111 @@ input type:pointer {
 }
 
 # === Sway Bindings ===
-# Open Terminal 
-bindsym $mod+Return exec $term
-bindsym Ctrl+Alt+t exec $term
-# Kill Window
-bindsym $mod+q kill
-bindsym Alt+f4 kill
-# reload configs
-bindsym $mod+Shift+c reload
-# swaymsg close
-bindsym $mod+Shift+e exec swaynag -t warning -m 'End sway?' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym {
+    # Open Terminal 
+    $mod+Return exec $term
+    Ctrl+Alt+t exec $term
+    # Kill Window
+    $mod+q kill
+    Alt+f4 kill
+    # reload configs
+    $mod+Shift+c reload
+    # swaymsg close
+    $mod+Shift+e exec swaynag -t warning -m 'End sway?' -b 'Yes, exit sway' 'swaymsg exit'
+}
 
 # === Workspace ===
-# Window focus
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
-bindsym $mod+$right focus right
+bindsym {
+    # Window focus
+    $mod+$left focus left
+    $mod+$down focus down
+    $mod+$up focus up
+    $mod+$right focus right
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+    $mod+Left focus left
+    $mod+Down focus down
+    $mod+Up focus up
+    $mod+Right focus right
 
-# Move window
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
+    # Move window
+    $mod+Shift+$left move left
+    $mod+Shift+$down move down
+    $mod+Shift+$up move up
+    $mod+Shift+$right move right
 
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+    $mod+Shift+Left move left
+    $mod+Shift+Down move down
+    $mod+Shift+Up move up
+    $mod+Shift+Right move right
 
-# Workspace switching
-bindsym $mod+1 workspace number 1
-bindsym $mod+2 workspace number 2
-bindsym $mod+3 workspace number 3
-bindsym $mod+4 workspace number 4
-bindsym $mod+5 workspace number 5
-bindsym $mod+6 workspace number 6
-bindsym $mod+7 workspace number 7
-bindsym $mod+8 workspace number 8
-bindsym $mod+9 workspace number 9
-bindsym $mod+0 workspace number 10
+    # Workspace switching
+    $mod+1 workspace number 1
+    $mod+2 workspace number 2
+    $mod+3 workspace number 3
+    $mod+4 workspace number 4
+    $mod+5 workspace number 5
+    $mod+6 workspace number 6
+    $mod+7 workspace number 7
+    $mod+8 workspace number 8
+    $mod+9 workspace number 9
+    $mod+0 workspace number 10
 
-# Move window cross-workspace
-bindsym $mod+Shift+1 move container to workspace number 1; workspace number 1
-bindsym $mod+Shift+2 move container to workspace number 2; workspace number 2
-bindsym $mod+Shift+3 move container to workspace number 3; workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4; workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5; workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6; workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7; workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8; workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9; workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10; workspace number 10
+    # Move window cross-workspace
+    $mod+Shift+1 move container to workspace number 1; workspace number 1
+    $mod+Shift+2 move container to workspace number 2; workspace number 2
+    $mod+Shift+3 move container to workspace number 3; workspace number 3
+    $mod+Shift+4 move container to workspace number 4; workspace number 4
+    $mod+Shift+5 move container to workspace number 5; workspace number 5
+    $mod+Shift+6 move container to workspace number 6; workspace number 6
+    $mod+Shift+7 move container to workspace number 7; workspace number 7
+    $mod+Shift+8 move container to workspace number 8; workspace number 8
+    $mod+Shift+9 move container to workspace number 9; workspace number 9
+    $mod+Shift+0 move container to workspace number 10; workspace number 10
 
-# Layouts
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-bindsym $mod+f fullscreen
+    # Layouts
+    $mod+w layout tabbed
+    $mod+e layout toggle split
+    $mod+f fullscreen
 
-# Float
-bindsym $mod+Shift+space floating toggle; resize set width 1000 height 800;
-bindsym $mod+space focus mode_toggle
+    # Split modules
+    $mod+z splitv
+    $mod+x splith
+
+    # Float
+    $mod+Shift+space floating toggle; resize set width 1000 height 800;
+    $mod+space focus mode_toggle
+
+    # Scratchpad
+    $mod+s scratchpad show
+    $mod+Shift+s move scratchpad; scratchpad show
+}
 
 # Window dragging
 floating_modifier $mod normal
 
-# Scratchpad
-bindsym $mod+s scratchpad show
-bindsym $mod+Shift+s move scratchpad; scratchpad show
-
 # Resize mode
+set $resize_step 50px
 mode "resize" {
-    bindsym $left resize shrink width 25px
-    bindsym $down resize grow height 25px
-    bindsym $up resize shrink height 25px
-    bindsym $right resize grow width 25px
+    bindsym {
+        $left resize shrink width $resize_step
+        $down resize grow height $resize_step
+        $up resize shrink height $resize_step
+        $right resize grow width $resize_step
 
-    bindsym Left resize shrink width 25px
-    bindsym Down resize grow height 25px
-    bindsym Up resize shrink height 25px
-    bindsym Right resize grow width 25px
+        Left resize shrink width $resize_step
+        Down resize grow height $resize_step
+        Up resize shrink height $resize_step
+        Right resize grow width $resize_step
 
-    bindsym u move left 25px
-    bindsym i move down 25px
-    bindsym o move up 25px
-    bindsym p move right 25px
+        u move left $resize_step
+        i move down $resize_step
+        o move up $resize_step
+        p move right $resize_step
 
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym $mod+r mode "default"
+        Return mode "default"
+        Escape mode "default"
+        $mod+r mode "default"
+    }
 }
 bindsym $mod+r mode "resize"
 
