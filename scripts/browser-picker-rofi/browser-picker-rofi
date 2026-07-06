@@ -1,0 +1,14 @@
+#!/bin/sh
+
+url="$1"
+
+browser=$(printf " Firefox\n󰑴 Waterfox\n Floorp\n Firefox Developer\n Tor" |
+    rofi -dmenu -i -p "Open URL in which browser?")
+
+case "$browser" in
+    *Firefox) firefox "$url" ;;
+    *Waterfox) waterfox "$url" ;;
+    *Floorp) floorp "$url" ;;
+    *Developer) firefox-developer "$url" ;;
+    # *"Tor") tor-browser "$url" ;;
+esac
