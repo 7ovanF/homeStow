@@ -11,10 +11,8 @@ if [[ $- == *i* ]]; then
     # Logs
     alias todo='nvim ~/logs/todolist.md'
     alias logs='cd ~/logs'
-    alias newlog='nvim $(date +%F).md'
-
-    # Notul
-    alias notul='nvim ~/Random/$(date +%F).txt'
+    alias stackpointer='nvim ~/tmp/stackpointer.txt'
+    alias sp=stackpointer
 
     # batman!
     mann() {
