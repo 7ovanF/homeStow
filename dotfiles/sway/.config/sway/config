@@ -1,10 +1,11 @@
-# Basic Settings
+# Definitions
 set $mod Mod4
 set $term kitty
-
-# Wallpaper
-set $wallpaper '~/Pictures/Wallpapers/sunset.jpg'
-
+# Take that GPT, shell variable syntaxes DO work!
+# Also, 's don't nullify escapes apparently
+set $wallpaper '${HOME}/Pictures/Wallpapers/sunset.jpg'
+set $sway-config-home '${XDG_CONFIG_HOME:-$HOME/.config}/sway'
+set $sway-scripts-home '$sway-config-home/scripts'
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -201,6 +202,9 @@ for_window [app_id="blueman-manager"] floating enable
 for_window [app_id="blueman-manager"] resize set width 900 height 700
 for_window [app_id="blueman-manager"] move position center
 
+# inactive-windows-transparency.py
+exec $sway-scripts-home/inactive-windows-transparency.py
+
 # Include other default sawy modules
 include /etc/sway/config.d/*
-include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "$sway-config-home/config.d/*.conf")'
