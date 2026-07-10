@@ -1,7 +1,9 @@
 configuration {
-	modi: "drun";
+	modi: "drun,filebrowser,ssh";
 /*  font: "LiterationMono Nerd Font 10"; */
-	display-drun:    "Applications";
+	display-drun: "Applications";
+	display-filebrowser: "File Browser";
+	display-ssh: "SSH";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -31,8 +33,8 @@ configuration {
 /*	hover-select: false;*/
 /*	eh: 1;*/
 /*	auto-select: false;*/
-/*	parse-hosts: false;*/
-/*	parse-known-hosts: true;*/
+	parse-hosts: false;
+	parse-known-hosts: false;
 	combi-modi: "drun";
 	matching: "fuzzy";
 /*	tokenize: true;*/
@@ -58,11 +60,9 @@ configuration {
 /*	display-window: ;*/
 /*	display-windowcd: ;*/
 /*	display-run: ;*/
-/*	display-ssh: ;*/
 /*	display-drun: ;*/
 /*	display-combi: ;*/
 /*	display-keys: ;*/
-/*	display-filebrowser: ;*/
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
 /*	kb-secondary-paste: "Control+v,Insert";*/
 /*	kb-clear-line: "Control+w";*/

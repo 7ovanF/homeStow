@@ -187,8 +187,8 @@ for_window [app_id="wiremix"] move position center
 exec swaync
 bindsym $mod+n exec swaync-client -t -sw
 
-# rofi
-bindsym $mod+Tab exec rofi -show drun
+# rofi (options in the config file)
+bindsym $mod+Tab exec rofi -show
 
 # clipse (clipboard)
 exec clipse -listen
