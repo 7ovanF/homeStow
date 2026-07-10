@@ -8,7 +8,7 @@
 import i3ipc
 
 focused_opacity_val = '1'
-opacity_val = '0.8';
+opacity_val = '0.75';
 ipc              = i3ipc.Connection()
 prev_focused     = None
 
