@@ -9,20 +9,33 @@ import i3ipc
 
 focused_opacity_val = '1'
 opacity_val = '0.75';
+terminal_opacity_val = '0.85'
+terminal_id = 'kitty'
 ipc              = i3ipc.Connection()
 prev_focused     = None
+
+# helpers for setting opacity
+def set_focused_opacity(window):
+    window.command('opacity ' + focused_opacity_val)
+
+def set_unfocused_opacity(window):
+    if window.app_id == terminal_id:
+        window.command('opacity ' + terminal_opacity_val)
+    else:
+        window.command('opacity ' + opacity_val)
 
 for window in ipc.get_tree():
     if window.focused:
         prev_focused = window
+        set_focused_opacity(window)
     else:
-        window.command('opacity ' + opacity_val)
+        set_unfocused_opacity(window)
 
 def on_window_focus(ipc, focused):
     global prev_focused
     if focused.container.id != prev_focused.id: # https://github.com/swaywm/sway/issues/2859
-        focused.container.command('opacity ' + focused_opacity_val)
-        prev_focused.command('opacity ' + opacity_val)
+        set_focused_opacity(focused.container) # watch out, might bug
+        set_unfocused_opacity(prev_focused)
         prev_focused = focused.container
 
 ipc.on("window::focus", on_window_focus)
