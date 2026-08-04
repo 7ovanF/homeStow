@@ -15,5 +15,6 @@ fi
 
 gsettings set org.gnome.desktop.interface font-name "${fontname}" || exit 1
 gsettings set org.gnome.desktop.interface icon-theme "${icontheme}" || exit 1
+gsettings set org.gnome.desktop.wm.preferences button-layout "${buttonlayout}" || exit 1
 
 echo "Successfully switched to ${theme}."
