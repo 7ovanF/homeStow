@@ -1,0 +1,19 @@
+#!/bin/sh
+
+theme=$(printf 'Default\nMacOS' | fzf)
+
+# Defaults
+fontname="Red Hat Text 12"
+icontheme="Qogir-Dark"
+buttonlayout="icon,menu:close"
+
+if [ ${theme} = "MacOS" ]; then
+    fontname="SF Pro Display 12"
+    icontheme="WhiteSur"
+    buttonlayout="icon,menu:minimize,maximize,close"
+fi
+
+gsettings set org.gnome.desktop.interface font-name "${fontname}" || exit 1
+gsettings set org.gnome.desktop.interface icon-theme "${icontheme}" || exit 1
+
+echo "Successfully switched to ${theme}."

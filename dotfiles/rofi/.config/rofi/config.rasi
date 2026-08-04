@@ -46,7 +46,7 @@ configuration {
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
 /*  theme: "~/.config/rofi/themes/jms-theme.rasi";*/
-/*	max-history-size: 25;*/
+	max-history-size: 35;
 /*	combi-hide-mode-prefix: false;*/
 /*	matching-negate-char: '-' /* unsupported */;*/
 /*	cache-dir: ;*/

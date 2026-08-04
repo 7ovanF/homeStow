@@ -3,7 +3,7 @@ set $mod Mod4
 set $term kitty
 # Take that GPT, shell variable syntaxes DO work!
 # Also, 's don't nullify escapes apparently
-set $wallpaper '${HOME}/Pictures/Wallpapers/sunset.jpg'
+set $wallpaper '/home/waldstein/Pictures/Wallpapers/sisley-villagelake.webp'
 set $sway-config-home '${XDG_CONFIG_HOME:-$HOME/.config}/sway'
 set $sway-scripts-home '$sway-config-home/scripts'
 # Home row direction keys, like vim
@@ -13,14 +13,14 @@ set $up k
 set $right l
 
 # === Visual Theme ===
-gaps inner 6
-gaps outer -1
+gaps inner 0
+gaps outer 0
 
 font pango:Liberation Mono 9
 
 seat seat0 xcursor_theme Hacked-Sky 24
 
-default_border pixel 1
+default_border pixel 0
 
 set $cl_high #2ecbd1
 set $cl_indi #2ecbd1

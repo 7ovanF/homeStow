@@ -58,9 +58,10 @@ autoload -Uz colors && colors
 
 # === KeyBindings ===
 WORDCHARS='' # so that it doesn't skip over symbols
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
-bindkey '^H' backward-kill-word
+bindkey '^[[1;3C' forward-word
+bindkey '^[[1;3D' backward-word
+#bindkey '^H' backward-kill-word
+# (re-disabling it to get used to the default alt bindings)
 
 # === Auto Completion ===
 autoload -Uz +X compinit && compinit

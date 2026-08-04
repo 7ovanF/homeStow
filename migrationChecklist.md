@@ -28,7 +28,7 @@
 - Wireshark
 
 ## Misc.
-- Timeshift (important)
+- Snapper (important) (if btrfs/LVM)
 - KDE Connect
 - bottles
 - steam
@@ -36,7 +36,6 @@
 
 ## Rice-related
 - `.config` files; just pull github
-- GRUB and plymouth themes
 - Icon pack: currently Qogir. Consider having it inherit Papirus (shouldn't be needed).
     Set via `gsettings`
 
