@@ -1,10 +1,11 @@
 [Desktop Entry]
 Name=Browser Picker
 Comment=Pick your poison
+# Don't forget to set default browser (xdg-settings)
 Exec=browser-picker-rofi %u
 Icon=/usr/share/icons/Qogir-Dark/24/actions/view-web-browser-dom-tree.svg
 Terminal=false
-Type=Terminal
+Type=Application
 Categories=Network;WebBrowser;
 GenericName=Pick your poison!
 MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
