@@ -7,9 +7,9 @@
     	"source": "$HOME/.config/fastfetch/ascii.txt",
         "color": { "1": "bright_cyan"},
     	"padding": {
-    		"top": 2,
-    		"left": 2,
-            "right": 7
+    		"top": 1,
+    		"left": 0,
+            "right": 4
     	}
     },
     "modules": [
@@ -23,7 +23,7 @@
         },
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
+            "format": "\u001b[90m┌──────────────── MACHINE ─────────────────┐"
         },
         {
             "type": "host",
@@ -32,31 +32,19 @@
         },
         {
             "type": "cpu",
-            "key": "│ ├",
-            "keyColor": "cyan"
+            "key": "  ├",
+            "keyColor": "cyan",
+            "format": "{name}"
         },
-        {
-            "type": "gpu",
-            "key": "│ ├󰍛",
-            "keyColor": "cyan"
-        },
-        {
+       {
             "type": "memory",
-            "key": "│ ├󰍛",
+            "key": "  ├󰍛",
             "keyColor": "cyan"
         },
         {
             "type": "disk",
-            "key": "└ └",
+            "key": "  └",
             "keyColor": "cyan"
-        },
-        {
-            "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
-        },
-        {
-            "type": "custom",
-            "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
         },
         {
             "type": "os",
@@ -65,56 +53,31 @@
         },
         {
             "type": "kernel",
-            "key": "│ ├",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "bios",
-            "key": "│ ├",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "packages",
-            "key": "│ ├󰏖",
+            "key": "  ├",
             "keyColor": "yellow"
         },
         {
             "type": "shell",
-            "key": "└ └",
+            "key": "  └",
             "keyColor": "yellow"
         },
         {
-            "type": "de",
-            "key": " DE",
-            "keyColor": "blue"
-        },
-        {
-            "type": "lm",
-            "key": "│ ├",
-            "keyColor": "blue"
-        },
-        {
             "type": "wm",
-            "key": "│ ├",
-            "keyColor": "blue"
-        },
-        {
-            "type": "wmtheme",
-            "key": "│ ├󰉼",
+            "key": "󰟪 WM",
             "keyColor": "blue"
         },
         {
             "type": "terminal",
-            "key": "└ └",
+            "key": "  └",
             "keyColor": "blue"
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+            "format": "\u001b[90m└──────────────────────────────────────────┘"
         },
         {
             "type": "custom",
-            "format": "\u001b[90m┌───────────────────Uptime / Age / DT────────────────┐"
+            "format": "\u001b[90m┌───────────────── STATUS ─────────────────┐"
         },
         {
             "type": "command",
@@ -128,18 +91,13 @@
             "keyColor": "red"
         },
         {
-            "type": "datetime",
-            "key": "  DateTime ",
-            "keyColor": "red"
-        },
-        {
             "type": "battery",
             "key": "  Battery ",
             "keyColor": "red"
         },
         {
             "type": "custom",
-            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+            "format": "\u001b[90m└──────────────────────────────────────────┘"
         },
         {
             "type": "colors",

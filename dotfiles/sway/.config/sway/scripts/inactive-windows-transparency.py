@@ -8,8 +8,8 @@
 import i3ipc
 
 focused_opacity_val = '1'
-opacity_val = '0.75';
-terminal_opacity_val = '0.85'
+opacity_val = '0.8';
+terminal_opacity_val = '0.9'
 terminal_id = 'kitty'
 ipc              = i3ipc.Connection()
 prev_focused     = None

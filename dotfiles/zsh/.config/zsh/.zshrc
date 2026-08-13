@@ -1,56 +1,56 @@
 # .zshrc
 
 # === Interactive shell setup ===
-if [[ $- == *i* ]]; then
+# if [[ $- == *i* ]]; then
+# Well, .zshrc is FOR interactive shells. I don't think this is needed!
 
-    # === Aliases ===
-    alias goldberg='cd /run/media/waldstein/GoldBerg'
-    alias info='info --vi-keys'
-    alias ls='ls -v --color=auto'
+# === Aliases ===
+alias goldberg='cd /run/media/waldstein/GoldBerg'
+alias info='info --vi-keys'
+alias ls='ls -v --color=auto'
 
-    # Logs
-    alias todo='nvim ~/logs/todolist.md'
-    alias logs='cd ~/logs'
-    alias stackpointer='nvim ~/tmp/stackpointer.txt'
-    alias sp=stackpointer
+# Logs
+alias todo='nvim ~/logs/todolist.md'
+alias logs='cd ~/logs'
+alias stackpointer='nvim ~/tmp/stackpointer.txt'
+alias sp=stackpointer
 
-    # batman!
-    mann() {
-        man "$1" | bat -l man --style=plain
-    }
+# batman!
+mann() {
+    man "$1" | bat -l man --style=plain
+}
 
-    # === SSH agent auto-init ===
-    # if ! pgrep -u "$(id -u)" ssh-agent >/dev/null; then
-    #     eval "$(ssh-agent -s)" >/dev/null
-    #
-    #     print -P "%B%F{magenta}Started the SSH Agent.%f%b"
-    # fi
-    # if ! pgrep -u "$(id -u)" ssh-agent >/dev/null; then
-    #     ssh-agent > ~/.ssh/agent.env
-    #     source ~/.ssh/agent.env >/dev/null
-    #
-    #     print -P "%B%F{magenta}Started the SSH Agent.%f%b"
-    # elif [[ -f ~/.ssh/agent.env ]]; then
-    #     source ~/.ssh/agent.env >/dev/null
-    # fi
+# === SSH agent auto-init ===
+# if ! pgrep -u "$(id -u)" ssh-agent >/dev/null; then
+#     eval "$(ssh-agent -s)" >/dev/null
+#
+#     print -P "%B%F{magenta}Started the SSH Agent.%f%b"
+# fi
+# if ! pgrep -u "$(id -u)" ssh-agent >/dev/null; then
+#     ssh-agent > ~/.ssh/agent.env
+#     source ~/.ssh/agent.env >/dev/null
+#
+#     print -P "%B%F{magenta}Started the SSH Agent.%f%b"
+# elif [[ -f ~/.ssh/agent.env ]]; then
+#     source ~/.ssh/agent.env >/dev/null
+# fi
 
-    # ===========
-    # ZSH PLUGINS
-    # ===========
-    plugin_dir="$HOME/.config/zsh/plugins"
+# ===========
+# ZSH PLUGINS
+# ===========
+plugin_dir="$HOME/.config/zsh/plugins"
 
-    source "$plugin_dir/zsh-autosuggestions/zsh-autosuggestions.zsh"
-    source "$plugin_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-    # ZSH_HIGHLIGHT_HIGHLIGHTERS += (brackets, pattern, regexp, cursor, root, line)
-    source "$plugin_dir/zsh-z/zsh-z.plugin.zsh"
+source "$plugin_dir/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$plugin_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+# ZSH_HIGHLIGHT_HIGHLIGHTERS += (brackets, pattern, regexp, cursor, root, line)
+source "$plugin_dir/zsh-z/zsh-z.plugin.zsh"
 
-    # Starship
-    eval "$(starship init zsh)"
+# Starship
+eval "$(starship init zsh)"
 
-    # Fastfetch
-    fastfetch
-    echo
-fi
+# Fastfetch
+fastfetch
+echo
 
 # === Prompt ===
 autoload -Uz colors && colors
@@ -60,8 +60,11 @@ autoload -Uz colors && colors
 WORDCHARS='' # so that it doesn't skip over symbols
 bindkey '^[[1;3C' forward-word
 bindkey '^[[1;3D' backward-word
+# shells usually use ctrl-arrows anyways
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+# (re-disabling this to get used to the default alt bindings)
 #bindkey '^H' backward-kill-word
-# (re-disabling it to get used to the default alt bindings)
 
 # === Auto Completion ===
 autoload -Uz +X compinit && compinit

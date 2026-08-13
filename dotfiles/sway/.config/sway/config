@@ -20,7 +20,7 @@ font pango:Liberation Mono 9
 
 seat seat0 xcursor_theme Hacked-Sky 24
 
-default_border pixel 0
+default_border pixel 2
 
 set $cl_high #2ecbd1
 set $cl_indi #2ecbd1
@@ -203,7 +203,7 @@ for_window [app_id="blueman-manager"] resize set width 900 height 700
 for_window [app_id="blueman-manager"] move position center
 
 # inactive-windows-transparency.py
-exec $sway-scripts-home/inactive-windows-transparency.py
+# exec $sway-scripts-home/inactive-windows-transparency.py
 
 # Include other default sawy modules
 include /etc/sway/config.d/*
