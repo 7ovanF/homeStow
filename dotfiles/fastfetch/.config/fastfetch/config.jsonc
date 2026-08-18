@@ -7,7 +7,7 @@
     	"source": "$HOME/.config/fastfetch/ascii.txt",
         "color": { "1": "bright_cyan"},
     	"padding": {
-    		"top": 1,
+    		"top": 2,
     		"left": 0,
             "right": 4
     	}

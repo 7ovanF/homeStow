@@ -3,7 +3,7 @@ set $mod Mod4
 set $term kitty
 # Take that GPT, shell variable syntaxes DO work!
 # Also, 's don't nullify escapes apparently
-set $wallpaper '/home/waldstein/Pictures/Wallpapers/sisley-villagelake.webp'
+set $wallpaper '${HOME}/Pictures/Wallpapers/sisley-villagelake.webp'
 set $sway-config-home '${XDG_CONFIG_HOME:-$HOME/.config}/sway'
 set $sway-scripts-home '$sway-config-home/scripts'
 # Home row direction keys, like vim
@@ -56,6 +56,7 @@ input type:touchpad {
     tap enabled
     tap_button_map lrm
     natural_scroll enabled
+    scroll_factor 1
     dwt enabled # you dont need this for touchpads
     drag_lock disabled
 }

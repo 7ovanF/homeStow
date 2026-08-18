@@ -52,6 +52,16 @@ eval "$(starship init zsh)"
 fastfetch
 echo
 
+cat << EOF
+Don't forget to:
+- Plant your feet on the ground
+- Put your knees at a 90+ degrees angle
+- Sit yo ass back
+- Lean your back
+- Elbow also at 90 degrees
+- Importantly, take care of your neck!
+EOF
+
 # === Prompt ===
 autoload -Uz colors && colors
 # PROMPT='%n@%m %F{blue}%~%f > ' # ah yeah, starship
