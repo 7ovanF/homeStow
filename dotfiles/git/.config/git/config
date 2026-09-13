@@ -1,3 +1,9 @@
 [user]
 	email = jovanfinesta@protonmail.com
 	user = 7ovanf
+
+[init]
+    defaultBranch = main
+
+[core]
+    editor = nvim

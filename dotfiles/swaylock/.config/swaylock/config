@@ -7,7 +7,8 @@ show-failed-attempts
 daemonize
 
 # Background
-image=~/Pictures/Wallpapers/moderncity.jpg
+#image=~/Pictures/Wallpapers/moderncity.jpg
+image=~/Pictures/Wallpapers/Odd-productivegmr.jpg
 scaling=stretch
 
 # Indicator shape

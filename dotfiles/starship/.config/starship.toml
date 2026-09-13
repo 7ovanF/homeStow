@@ -14,7 +14,7 @@ show_always = true
 [directory]
 truncation_length = 8
 truncate_to_repo = true
-format = '[- \[$path\]](bold blue) '
+format = '[– \[$path\]](bold blue) '
 
 [character]
 success_symbol = "[\\$](bold green)"
