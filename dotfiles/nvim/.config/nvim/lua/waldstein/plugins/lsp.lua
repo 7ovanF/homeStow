@@ -32,6 +32,9 @@ return {
         })
         vim.lsp.enable('pylsp')
 
+        -- Typescript LS (for JS actually)
+        vim.lsp.enable('ts_ls')
+
         -- Lua LS
         vim.lsp.config('lua_ls', {
           on_init = function(client)
