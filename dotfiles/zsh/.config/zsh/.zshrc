@@ -44,6 +44,7 @@ source "$plugin_dir/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$plugin_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 # ZSH_HIGHLIGHT_HIGHLIGHTERS += (brackets, pattern, regexp, cursor, root, line)
 source "$plugin_dir/zsh-z/zsh-z.plugin.zsh"
+source <(fzf --zsh)
 
 # Starship
 eval "$(starship init zsh)"

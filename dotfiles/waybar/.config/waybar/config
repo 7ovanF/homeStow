@@ -108,9 +108,11 @@
     },
     "cpu": {
         "format": "{usage}% ",
+        "interval": 2,
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+        "interval": 2,
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -136,7 +138,8 @@
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "interval": 20,
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -144,7 +147,7 @@
     "custom/battery-conserve": {
         "format-text": "{}",
         "return-type": "json",
-        "interval": 5,
+        "interval": 60,
         "exec": "~/.config/waybar/statusbar/battery-conserve-status.sh 2> /dev/null",
         // "on-click": "conserve 2> /dev/null", // needs sudo...
     },

@@ -68,6 +68,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # Touchpad/mouse settings should be configured with xinput or
 # an Xorg configuration file.
+
+# Repeat rate
+exec --no-startup-id xset r rate 200 35
+
 # === i3 Bindings ===
 # Open Terminal
 
