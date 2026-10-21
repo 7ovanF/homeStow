@@ -14,15 +14,14 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 if (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.opt.rtp:prepend(lazypath)
-
-  vim.g.mapleader = " "
-  vim.g.maplocalleader = "\\"
-
   -- Setup lazy.nvim
   require("lazy").setup("waldstein.plugins", {
     checker = {
       enabled = true,
       notify = false,
     },
+    ui = {
+      border = "rounded"
+    }
   })
 end
