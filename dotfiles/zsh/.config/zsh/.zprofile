@@ -21,8 +21,5 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history
 export _Z_DATA="$XDG_DATA_HOME/z"
 
-# nvim all the way
-export EDITOR="/usr/bin/nvim"
-
 # Specific error with xfce4-appfinder
 export NO_AT_BRIDGE=1
