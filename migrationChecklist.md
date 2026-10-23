@@ -15,7 +15,7 @@
 
 ## Comms
 - Discord
-- Line (if .exe: specifically 7.8.1)
+- Line (most reliably, use chromium extension. if .exe: specifically 7.8.1)
 
 ## Work
 - Codium
@@ -30,6 +30,7 @@
 ## Misc.
 - Snapper (important) (if btrfs/LVM)
 - KDE Connect
+- Wireguard to access homelab
 - bottles
 - steam
 - inputremapper (you won't need this for intact laptops, ha)
