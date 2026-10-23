@@ -1,3 +1,12 @@
 [submodule "dotfiles/tmux/.config/tmux/plugins/tmux-resurrect"]
 	path = dotfiles/tmux/.config/tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect.git
+[submodule "dotfiles/zsh/.config/zsh/plugins/zsh-z"]
+	path = dotfiles/zsh/.config/zsh/plugins/zsh-z
+	url = https://github.com/agkozak/zsh-z.git
+[submodule "dotfiles/zsh/.config/zsh/plugins/zsh-autosuggestions"]
+	path = dotfiles/zsh/.config/zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "dotfiles/zsh/.config/zsh/plugins/zsh-syntax-highlighting"]
+	path = dotfiles/zsh/.config/zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
