@@ -1,6 +1,8 @@
 # homeStow (7ovanF's `stow` hole; dotfiles, wallpapers...)
 Contains some personal preferences & stuff I personally use, be sure to remove or modify as you please
 
+![Pic](pic.png)
+
 ## First, importing submodules (if you use zsh, tmux, etc. which has plugins as submodules)
 ```bash
 git submodule update
