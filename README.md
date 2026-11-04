@@ -3,6 +3,8 @@ Contains some personal preferences & stuff I personally use, be sure to remove o
 
 ![Pic](pic.png)
 
+> If these dotfiles contain assets I haven't credited yet (I definitely copied some things blindly early on) let me know
+
 ## First, importing submodules (if you use zsh, tmux, etc. which has plugins as submodules)
 ```bash
 git submodule update
@@ -24,5 +26,5 @@ Just like dotfiles, stow to `~`. You don't need any of these, probably. `browser
 ## `home`
 Yeah, just contains my wallpapers and misc work. I personally only stow the Wallpaper folder instead of the Pictures folder (need manual `-t` to `~/Pictures`)
 
-## `rices`, `display-manager`
+## `rices`
 Not stowed, just copied to appropriate spots.
