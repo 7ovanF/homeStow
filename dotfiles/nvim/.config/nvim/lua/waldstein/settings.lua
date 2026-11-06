@@ -6,6 +6,8 @@ vim.lsp.enable({
     "ts_ls",
     "lua_ls",
 })
+-- Auto-triggered with blink
+-- vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { desc = "Show docs while typing" })
 
 -- MECHANICS --
 -- Numbering
@@ -25,8 +27,8 @@ vim.opt.shiftwidth = 4 -- Number of spaces inserted when indenting
 vim.opt.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
 vim.opt.autoindent = true -- Enable automatic indentation
 
-vim.opt.scrolloff=10
-vim.opt.sidescrolloff=25
+vim.opt.scrolloff=5
+vim.opt.sidescrolloff=5
 
 -- Diagnostics 
 vim.diagnostic.config({

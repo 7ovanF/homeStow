@@ -40,11 +40,18 @@ return {
         list = {
             selection = { preselect = true, auto_insert = false }
         },
-        documentation = { auto_show = true, auto_show_delay_ms = 0 },
         ghost_text = { enabled = true },
         menu = {
             draw = { treesitter = {'lsp'} }
         }
+    },
+    -- https://cmp.saghen.dev/configuration/signature.html#signature
+    signature = {
+      enabled = true,
+      trigger = {
+        enabled = true,
+        show_on_insert = true,
+      },
     },
 
     -- Default list of enabled providers defined so that you can extend it
