@@ -1,0 +1,18 @@
+#!/bin/sh
+# Usage: swap-ws <target workspace number>
+# use while swaywm is active
+# Idea from: https://www.reddit.com/r/swaywm/comments/vhsi81/swapping_workspaces/ (comment section)
+
+target=$1
+
+current="$(
+    swaymsg -t get_workspaces |
+    jq -r '.[] | select(.focused) | .name'
+)"
+
+# Just exit if trying to swap with self...
+[ "$current" = "$target" ] && exit 0
+
+swaymsg rename workspace "${current}" to "${target}_"; 
+swaymsg rename workspace "${target}" to "${current}"; 
+swaymsg rename workspace "${target}_" to "${target}";

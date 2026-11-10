@@ -1,14 +1,3 @@
--- PLUGINS --
--- LSP enables
-vim.lsp.enable({
-    "ccls",
-    "pylsp",
-    "ts_ls",
-    "lua_ls",
-})
--- Auto-triggered with blink
--- vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { desc = "Show docs while typing" })
-
 -- MECHANICS --
 -- Numbering
 vim.opt.number = true
@@ -63,13 +52,6 @@ hl(0, "NormalFloat", {
 --   ctermfg = "Cyan",
 -- })
 vim.opt.winborder = "rounded"
--- Treesit only installed
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "c", "cpp", "python"},
-  callback = function()
-    vim.treesitter.start()
-  end,
-})
 
 -- KEYBINDS --
 vim.g.mapleader = " "
@@ -95,6 +77,6 @@ vim.keymap.set("v", "<", "<gv", { noremap = true })
 -- Window creation switches to it automatically
 vim.keymap.set("n", "<C-w>v", "<C-w>v<C-w>w", { desc = "Vertical split and focus on it" })
 vim.keymap.set("n", "<C-w>s", "<C-w>s<C-w>w", { desc = "Horizontal split and focus on it" })
--- fzf files
-vim.keymap.set("n", "<C-p>", "<cmd>FzfLua files<cr>", { desc = "Find files" })
-vim.keymap.set("n", "<C-f>", "<cmd>FzfLua live_grep<cr>", { desc = "Grep" })
+-- Diagnostics
+vim.keymap.set('n', '<leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>',
+  { noremap = true, silent = true, desc = "Show floating diagnostics" })

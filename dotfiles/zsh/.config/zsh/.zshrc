@@ -10,7 +10,7 @@ alias info='info --vi-keys'
 alias ls='ls -v --color=auto'
 
 # Logs
-alias todo='nvim ~/logs/todolist.md'
+alias todo='nvim ~/homeStow/todolist.md'
 alias logs='cd ~/logs'
 alias stackpointer='nvim ~/tmp/stackpointer.txt'
 alias sp=stackpointer

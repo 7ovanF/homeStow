@@ -3,7 +3,7 @@ set $mod Mod4
 set $term kitty
 # Take that GPT, shell variable syntaxes DO work!
 # Also, 's don't nullify escapes apparently
-set $wallpaper '${HOME}/Pictures/Wallpapers/cliff_sea.jpg'
+set $wallpaper '${HOME}/Pictures/Wallpapers/sisley-villagelake.webp'
 set $sway-config-home '${XDG_CONFIG_HOME:-$HOME/.config}/sway'
 set $sway-scripts-home '$sway-config-home/scripts'
 # Home row direction keys, like vim
@@ -83,6 +83,10 @@ bindsym {
     $mod+Shift+e exec swaynag -t warning -m 'End sway?' -b 'Yes, exit sway' 'swaymsg exit'
 }
 
+set $ws1 = 3
+set $ws2 = 4
+set $swap = swap
+
 # === Workspace ===
 bindsym {
     # Window focus
@@ -130,6 +134,36 @@ bindsym {
     $mod+Shift+8 move container to workspace number 8; workspace number 8
     $mod+Shift+9 move container to workspace number 9; workspace number 9
     $mod+Shift+0 move container to workspace number 10; workspace number 10
+
+    # Move whole workspace
+    # $mod+Ctrl+1 move workspace to number 1
+    # $mod+Ctrl+2 move workspace to number 2
+    # $mod+Ctrl+3 move workspace to number 3
+    # $mod+Ctrl+4 move workspace to number 4
+    # $mod+Ctrl+5 move workspace to number 5
+
+    # $mod+Ctrl+2 [workspace=$ws1] \
+    #     move workspace $swap; \
+    #     [workspace=$ws2] move workspace $ws1; \
+    #     [workspace=$swap] move workspace $ws2
+    # $mod+Ctrl+2 \
+    #     mark --add __swap_a; \
+    #     move container to workspace $ws2; \
+    #     mark --add __swap_b; \
+    #     [con_mark="__swap_a"] swap container with mark __swap_b; \
+    #     [con_mark="__swap_a"] unmark __swap_a; \
+    #     [con_mark="__swap_b"] unmark __swap_b
+
+    $mod+Ctrl+1 exec $sway-scripts-home/swap-ws 1
+    $mod+Ctrl+2 exec $sway-scripts-home/swap-ws 2
+    $mod+Ctrl+3 exec $sway-scripts-home/swap-ws 3
+    $mod+Ctrl+4 exec $sway-scripts-home/swap-ws 4
+    $mod+Ctrl+5 exec $sway-scripts-home/swap-ws 5
+    $mod+Ctrl+6 exec $sway-scripts-home/swap-ws 6
+    $mod+Ctrl+7 exec $sway-scripts-home/swap-ws 7
+    $mod+Ctrl+8 exec $sway-scripts-home/swap-ws 8
+    $mod+Ctrl+9 exec $sway-scripts-home/swap-ws 9
+    $mod+Ctrl+0 exec $sway-scripts-home/swap-ws 10
 
     # Layouts
     $mod+w layout tabbed

@@ -7,6 +7,11 @@ return {
   ---@module "fzf-lua"
   ---@type fzf-lua.Config|{}
   ---@diagnostic disable: missing-fields
-  opts = {}
+  opts = {},
   ---@diagnostic enable: missing-fields
+  config = function ()
+    -- fzf files
+    vim.keymap.set("n", "<C-p>", "<cmd>FzfLua files<cr>", { desc = "Find files" })
+    vim.keymap.set("n", "<C-f>", "<cmd>FzfLua live_grep<cr>", { desc = "Grep" })
+  end
 }

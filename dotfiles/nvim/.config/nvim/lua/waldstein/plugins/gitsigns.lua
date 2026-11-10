@@ -70,6 +70,6 @@ return {
       end
     end, { desc = "Previous Git hunk" })
 
-    vim.keymap.set("n", "<leader>hp", gs.preview_hunk, { desc = "Preview Git hunk" })
+    vim.keymap.set("n", "<leader>h", gs.preview_hunk, { desc = "Preview Git hunk" })
   end
 }
