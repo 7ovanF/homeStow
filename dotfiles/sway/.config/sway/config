@@ -3,7 +3,6 @@ set $mod Mod4
 set $term kitty
 # Take that GPT, shell variable syntaxes DO work!
 # Also, 's don't nullify escapes apparently
-set $wallpaper '${HOME}/Pictures/Wallpapers/sisley-villagelake.webp'
 set $sway-config-home '${XDG_CONFIG_HOME:-$HOME/.config}/sway'
 set $sway-scripts-home '$sway-config-home/scripts'
 # Home row direction keys, like vim
@@ -37,8 +36,6 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 output eDP-1 resolution 1920x1080
 output eDP-1 scale 1.1
 # output eDP-1 transform 270
-
-output * background $wallpaper stretch
 
 # exec 'sleep 3; swaymsg workspace 1'
 
