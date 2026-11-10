@@ -20,6 +20,12 @@ stow -D zsh -t ~ # unstow from system
 
 Each dotfile folder is structured in a way that immediately maps to a proper config location, e.g. `~/.config/<program name>` when stowed to `~`.
 
+#### Sway wallpaper
+The file `dotfiles/sway/.config/sway/config.d/99-wallpaper.conf` has been added to the `.gitignore`. Just add the following to set the wallpaper:
+```
+output * background '${HOME}/Pictures/Wallpapers/sisley-villagelake.webp' stretch
+```
+
 ## `scripts`
 Just like dotfiles, stow to `~`. You don't need any of these, probably. `browser-picker-rofi` is neat though.
 
