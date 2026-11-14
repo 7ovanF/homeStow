@@ -70,15 +70,15 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
     "cpu": {
-        "format": "[CPU: {usage}%]",
+        "format": "[CPU {usage}%]",
         "interval": 2,
     },
     "memory": {
-        "format": "[MEM: {}%]",
+        "format": "[MEM {}%]",
         "interval": 2,
     },
     "backlight": {
-        "format": "[LIGHT: {percent}%]",
+        "format": "[LIGHT {percent}%]",
     },
     "battery": {
         "states": {
@@ -86,10 +86,10 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "[BAT: {capacity}%]",
-        "format-charging": "[BAT: {capacity}%]󱐋",
-        "format-plugged": "[BAT: {capacity}%]",
-        "format-full": "[BAT: MAX]",
+        "format": "[BAT {capacity}%]",
+        "format-charging": "[BAT {capacity}%]󱐋",
+        "format-plugged": "[BAT {capacity}%]",
+        "format-full": "[BAT MAX]",
         "format-icons": ["", "", "", "", ""],
         "interval": 20,
     },
@@ -120,11 +120,11 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "[VOL: {volume}%]",
+        "format": "[VOL {volume}%]",
         "format-muted": "[MUTE]",
-        "format-bluetooth": "[VOL: {volume}% ]",
+        "format-bluetooth": "[VOL {volume}% ]",
         "format-bluetooth-muted": "[MUTE ]",
-        "format-source": "MIC: {volume}%",
+        "format-source": "MIC {volume}%",
         "format-source-muted": "NOMIC",
         "on-click": "kitty --app-id=wiremix -e sh -c 'wiremix -v output'" // now it's wiremix!
     },

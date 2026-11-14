@@ -35,9 +35,13 @@
 @define-color green-text #2a5c45;
 @define-color neutral #90b1b1;
 
-/* Miscellaneous */
-@define-color timer #f3f385;
+/* Widget-specific*/
 @define-color keyboard #dddddd;
+@define-color timer #f3f385;
+@define-color cpu #ff6874;
+@define-color memory #bea4ff;
+@define-color backlight #f3f385;
+@define-color pulseaudio #f9b168;
 @define-color idle #dd0000;
 
 
@@ -256,9 +260,11 @@ window#waybar.empty #window {
  * ============================================================ */
 
 #cpu {
+    color: @cpu;
 }
 
 #memory {
+    color: @memory;
 }
 
 #disk {
@@ -271,6 +277,7 @@ window#waybar.empty #window {
  * ============================================================ */
 
 #backlight {
+    color: @backlight;
 }
 
 #temperature {
@@ -313,6 +320,10 @@ window#waybar.empty #window {
  * ============================================================ */
 
 #pulseaudio {
+    color: @pulseaudio;
+}
+#pulseaudio.muted {
+    color: @text-muted;
 }
 
 #custom-media {
