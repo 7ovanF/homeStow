@@ -7,7 +7,7 @@
     "margin": "0, 0, 0, 0", // Top,Left,Bottom,Right
     // disabled: "custom/wvkbd-toggle"
     "modules-left": ["sway/workspaces", "custom/scratchpad-indicator", "sway/mode", "sway/window"],
-    "modules-center": ["custom/date-time"],
+    "modules-center": ["clock"],
     "modules-right": ["tray", "custom/timer", "idle_inhibitor", "backlight", "pulseaudio", "cpu", "memory", "custom/battery-conserve", "battery"],
 
     // Modules configuration
@@ -65,9 +65,10 @@
         "spacing": 5,
     },
     "clock": {
-        "format": "[{:%H:%M}]",
-        "format-alt": "[{:%Y-%m-%d}]",
+        "format": "{:%a, %d %b %Y - %H:%M}",
+        "format-alt": "{:%a, %d %b %Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-click": "~/.config/waybar/statusbar/it-is-time.sh",
     },
     "cpu": {
         "format": "[CPU {usage}%]",
@@ -127,13 +128,6 @@
         "format-source": "MIC {volume}%",
         "format-source-muted": "NOMIC",
         "on-click": "kitty --app-id=wiremix -e sh -c 'wiremix -v output'" // now it's wiremix!
-    },
-    "custom/date-time": {
-        "format-text": "{}",
-        "tooltip": false,
-        "interval": 1,
-        "exec": "~/.config/waybar/statusbar/date-time.sh",
-        "on-click": "~/.config/waybar/statusbar/date-time-toggle.sh"
     },
     "custom/network": {
         "format-text": "{}",

@@ -167,7 +167,6 @@ window#waybar.empty #window {
 #temperature,
 #backlight,
 #network,
-#custom-date-time,
 #custom-network,
 #custom-scratchpad-indicator,
 #custom-wvkbd-toggle,
@@ -176,25 +175,19 @@ window#waybar.empty #window {
 #tray,
 #idle_inhibitor,
 #mpd {
-    padding: 0 1px;
+    padding: 0 1.5px;
     margin: 0;
     color: @text-muted;
 }
 
 
 /* ============================================================
- * Clock and date
+ * Clock
  * ============================================================ */
 
 #clock {
     color: @text;
-    background-color: #64727D;
 }
-
-#custom-date-time {
-    color: @text;
-}
-
 
 /* ============================================================
  * Battery
