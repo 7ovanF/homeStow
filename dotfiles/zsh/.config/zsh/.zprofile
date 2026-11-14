@@ -23,3 +23,15 @@ export _Z_DATA="$XDG_DATA_HOME/z"
 
 # Specific error with xfce4-appfinder
 export NO_AT_BRIDGE=1
+
+# Flutter
+FLUTTER_BIN_DIR="$HOME/development/flutter/bin/"
+if [ -d "$FLUTTER_BIN_DIR" ]; then
+    export PATH="$PATH:$FLUTTER_BIN_DIR"
+    export CHROME_EXECUTABLE="/usr/bin/chromium-browser"
+fi
+# Java LS
+JDTLS_BIN_DIR="$HOME/development/jdt/bin"
+if [ -d "$JDTLS_BIN_DIR" ]; then
+    export PATH="$PATH:$JDTLS_BIN_DIR"
+fi

@@ -132,25 +132,6 @@ bindsym {
     $mod+Shift+9 move container to workspace number 9; workspace number 9
     $mod+Shift+0 move container to workspace number 10; workspace number 10
 
-    # Move whole workspace
-    # $mod+Ctrl+1 move workspace to number 1
-    # $mod+Ctrl+2 move workspace to number 2
-    # $mod+Ctrl+3 move workspace to number 3
-    # $mod+Ctrl+4 move workspace to number 4
-    # $mod+Ctrl+5 move workspace to number 5
-
-    # $mod+Ctrl+2 [workspace=$ws1] \
-    #     move workspace $swap; \
-    #     [workspace=$ws2] move workspace $ws1; \
-    #     [workspace=$swap] move workspace $ws2
-    # $mod+Ctrl+2 \
-    #     mark --add __swap_a; \
-    #     move container to workspace $ws2; \
-    #     mark --add __swap_b; \
-    #     [con_mark="__swap_a"] swap container with mark __swap_b; \
-    #     [con_mark="__swap_a"] unmark __swap_a; \
-    #     [con_mark="__swap_b"] unmark __swap_b
-
     $mod+Ctrl+1 exec $sway-scripts-home/swap-ws 1
     $mod+Ctrl+2 exec $sway-scripts-home/swap-ws 2
     $mod+Ctrl+3 exec $sway-scripts-home/swap-ws 3
@@ -236,6 +217,9 @@ for_window [app_id="blueman-manager"] move position center
 
 # inactive-windows-transparency.py
 # exec $sway-scripts-home/inactive-windows-transparency.py
+
+# waybar_timer
+exec waybar_timer serve
 
 # Include other default sawy modules
 include /etc/sway/config.d/*

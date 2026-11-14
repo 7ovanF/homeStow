@@ -59,8 +59,9 @@ autoload -Uz colors && colors
 
 # === KeyBindings ===
 WORDCHARS='' # so that it doesn't skip over symbols
-bindkey '^[[1;3C' forward-word
-bindkey '^[[1;3D' backward-word
+# These binds screw me over on browsers
+# bindkey '^[[1;3C' forward-word
+# bindkey '^[[1;3D' backward-word
 # shells usually use ctrl-arrows anyways
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word

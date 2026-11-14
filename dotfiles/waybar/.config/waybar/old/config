@@ -1,0 +1,241 @@
+// CREDIT: justine_smithies for base configs
+{
+    // "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 24, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "margin": "0, 0, 0, 0", // Top,Left,Bottom,Right
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "custom/scratchpad-indicator", "sway/mode"],
+    "modules-center": ["custom/date-time"],
+    // disabled: "custom/wvkbd-toggle"
+    "modules-right": ["tray", "idle_inhibitor", "backlight", "pulseaudio", "cpu", "memory", "custom/battery-conserve", "battery"],
+
+    // Modules configuration
+    "sway/workspaces": {
+        "persistent_workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [],
+        "9": [],
+        "10": [],
+
+    },
+        "current-only": false,
+        "disable-scroll": true,
+        "all-outputs": true,
+        "active-only": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1", // "¹"
+            "2": "2", // "󰏪²"
+            "3": "3", // "³"
+            "4": "4", // "⁴"
+            "5": "5", // "⁵"
+            "6": "6",
+            "7": "7",
+            "8": "⁸",
+            "9": "⁹",
+            "10": "⁰"
+//            "urgent": "",
+//            "focused": "",
+//            "default": ""
+        }
+    },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/language": {
+        "format": "{}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 12,
+        // "icons": {
+        //     "blueman": "bluetooth"
+        // }
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "interval": 2,
+    },
+    "memory": {
+        "format": "{}% ",
+        "interval": 2,
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C "
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["󰃟", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󱐋 {icon}",
+        "format-plugged": "{capacity}%  {icon}",
+        // "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 20,
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "custom/battery-conserve": {
+        "format-text": "{}",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "~/.config/waybar/statusbar/battery-conserve-status.sh 2> /dev/null",
+        // "on-click": "conserve 2> /dev/null", // needs sudo...
+    },
+    "network": {
+        "interval": 2,
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-linked": "󰌷",
+        "format-disconnected": "󰯡",
+        //"format-alt": "{ifname}: {ipaddr}/{cidr}",
+        //"on-click": "~/.config/waybar/statusbar/network.sh ShowInfo",
+        "tooltip": true,
+        "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format-wifi": "{essid} {signalStrength}% - {ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        //"format-muted": " {format_source}",
+        "format-muted": "",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "kitty --app-id=wiremix -e sh -c 'wiremix -v output'" // now it's wiremix!
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/arch-updates": {
+        "format-text": "{}",
+        "return-type": "json",
+        "interval": 600,
+        "exec": "~/.config/waybar/statusbar/arch-updates.sh 2> /dev/null",
+        "exec-if": "exit 0",
+        "on-click": "kitty -e 'paru'; pkill -SIGRTMIN+8 waybar",
+        "signal": 8
+    },
+    "custom/date-time": {
+        "format-text": "{}",
+        "tooltip": false,
+        "interval": 1,
+        "exec": "~/.config/waybar/statusbar/date-time.sh",
+        "on-click": "~/.config/waybar/statusbar/date-time-toggle.sh"
+    },
+    "custom/network": {
+        "format-text": "{}",
+        "return-type": "json",
+        "restart-interval": 1,
+        "exec": "~/.config/waybar/statusbar/network.sh 2> /dev/null"
+    },
+    "custom/scratchpad-indicator": {
+        "format-text": "{}",
+        "return-type": "json",
+        "interval": 3,
+        "exec": "~/.config/waybar/statusbar/scratchpad-indicator.sh 2> /dev/null",
+        "exec-if": "exit 0",
+        "on-click": "swaymsg 'scratchpad show'",
+        "on-click-right": "swaymsg 'move scratchpad'"
+    },
+    "custom/wvkbd-toggle": {
+        "format-text": "{}",
+        "return-type": "json",
+        "interval": 900,
+        "exec": "~/.config/waybar/statusbar/wvkbd-toggle-status.sh 2> /dev/null",
+        "on-click": "~/.config/waybar/statusbar/wvkbd-toggle.sh 2> /dev/null",
+    }
+}

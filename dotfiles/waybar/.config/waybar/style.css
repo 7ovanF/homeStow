@@ -1,78 +1,92 @@
+/* ============================================================
+ * Color palette
+ * ============================================================ */
+
+/* Base */
+@define-color background rgba(16, 16, 27, .9);
+@define-color background-dark #000000;
+@define-color background-hover rgba(0, 0, 0, 0.5);
+@define-color background-subtle rgba(255, 255, 255, 0.15);
+
+/* Text */
+@define-color text #e0e7f3;
+@define-color text-muted #a0b1b1;
+@define-color text-white #ffffff;
+@define-color text-black #000000;
+
+/* Accents */
+@define-color cyan #60f8f8;
+@define-color blue #76c9fc;
+@define-color blue-light #80d1f1;
+@define-color teal #14727D;
+
+/* Battery */
+@define-color battery-good #c3ffca;
+@define-color battery-warning #f3ff8a;
+@define-color battery-charging #5bdc73;
+@define-color battery-critical #f53c3c;
+
+/* Status */
+@define-color danger #eb4d4b;
+@define-color success #00cc00;
+@define-color green #97e1ad;
+@define-color green-dark #66cc99;
+@define-color green-muted #51a37a;
+@define-color green-text #2a5c45;
+@define-color neutral #90b1b1;
+
+/* Miscellaneous */
+@define-color timer #f3f385;
+@define-color keyboard #dddddd;
+@define-color idle #dd0000;
+
+
+/* ============================================================
+ * Global
+ * ============================================================ */
+
 * {
     border: none;
-    color: #e0e7f3;
+    color: @text;
     border-radius: 0;
-    font-family: "0xProto Nerd Font Propo";
-    font-size: 14px;
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 13px;
     min-height: 0;
 }
 
+
+/* ============================================================
+ * Waybar
+ * ============================================================ */
+
 window#waybar {
-    background-color: rgba(16, 16, 27, 0.80);
+    background-color: @background;
     /* border: 1px solid #2ecbd1; */
-    /* box-shadow: inset 0.2px 0.3px #beebf1; ACCIDENTALLY MADE A LIGHT EFFECT LMAO  */
+    /* box-shadow: inset 0.2px 0.3px #beebf1; ACCIDENTALLY MADE A LIGHT EFFECT LMAO */
     transition-property: background-color;
     transition-duration: .5s;
 }
 
-#workspaces button {
-    padding: 0 10px;
+/* flaunt the wallpaper to the world */
+window#waybar.empty {
     background-color: transparent;
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -2px transparent;
-    letter-spacing: 0.2em;
+}
+window#waybar.empty * {
+    color: @text-black;
+    background-color: transparent;
+}
+window#waybar.empty #workspaces button.focused {
+    background-color: @background-subtle;
+}
+window#waybar.empty #tray {
+    background-color: @background-hover;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.5);
-    /* box-shadow: inset 0 -2px #eee8d5; */
-}
 
-#workspaces button.focused {
-    background-color: #000000;
-    box-shadow: inset 0 -2px #60f8f8;
-}
+/* ============================================================
+ * Workspaces
+ * ============================================================ */
 
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#workspaces button.current_output {
-    /* color: #ffffff; */
-}
-
-#mode {
-    background-color: #14727D;
-    border-top: 3px solid #60f8f8;
-}
-
-#clock,
-#battery,
-#custom-battery-conserve,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#custom-date-time,
-#custom-network,
-#custom-scratchpad-indicator,
-#custom-wvkbd-toggle,
-#pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#mpd {
-    padding: 0 5px;
-    margin: 0;
-    margin-right: 1px;
-    /* color: #ffffff; */
-}
-
-#window,
 #workspaces {
     margin: 0 4px;
 }
@@ -87,36 +101,128 @@ window#waybar {
     margin-right: 0;
 }
 
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -2px transparent;
+    letter-spacing: 0.2em;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    background: @background-hover;
+    /* box-shadow: inset 0 -2px #eee8d5; */
+}
+
+#workspaces button.focused {
+    background-color: @background-dark;
+    box-shadow: inset 0 -2px @cyan;
+}
+
+#workspaces button.urgent {
+    background-color: @danger;
+}
+
+#workspaces button.current_output {
+    /* color: #ffffff; */
+}
+
+/* === Window Info === */
+
+#window {
+    background-color: @background-subtle;
+}
+
+/* some bgcolor leaks out */
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+/* === Mode === */
+
+#mode {
+    background-color: @teal;
+    padding: 2px;
+}
+
+
+
+
+/* ============================================================
+ * Module layout and shared styling
+ * ============================================================ */
+
+#clock,
+#battery,
+#custom-battery-conserve,
+#custom-timer,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#custom-date-time,
+#custom-network,
+#custom-scratchpad-indicator,
+#custom-wvkbd-toggle,
+#pulseaudio,
+#custom-media,
+#tray,
+#idle_inhibitor,
+#mpd {
+    padding: 0 1px;
+    margin: 0;
+    color: @text-muted;
+}
+
+
+/* ============================================================
+ * Clock and date
+ * ============================================================ */
+
 #clock {
+    color: @text;
     background-color: #64727D;
 }
 
+#custom-date-time {
+    color: @text;
+}
+
+
+/* ============================================================
+ * Battery
+ * ============================================================ */
+
 #battery {
-    /*background-color: #ffffff;*/
-    color: #c3ffca;
+    /* background-color: #ffffff; */
+    color: @battery-good;
 }
 
 #battery.warning {
-    /*background-color: #ffffff;*/
-    color: #f3ff8a;
+    /* background-color: #ffffff; */
+    color: @battery-warning;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
     /* color: #7bfc93; */
-    color: #ffffff;
-    background-color: #5bdc73;
+    color: @text-white;
+    background-color: @battery-charging;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: @text-white;
+        color: @text-black;
     }
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: @battery-critical;
+    color: @text-white;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -124,83 +230,103 @@ window#waybar {
     animation-direction: alternate;
 }
 
+
+/* ============================================================
+ * Battery conservation
+ * ============================================================ */
+
 #custom-battery-conserve.off {
-    color: #80b1b1;
-}
-#custom-battery-conserve.on {
-    color: #c3ffca;
 }
 
-label:focus {
-    background-color: #000000;
+#custom-battery-conserve.on {
+    color: @battery-good;
 }
+
+
+/* ============================================================
+ * Timer
+ * ============================================================ */
+
+#custom-timer {
+    color: @timer;
+}
+
+/* ============================================================
+ * CPU, memory and disk
+ * ============================================================ */
 
 #cpu {
-    color: #ff6874;
 }
 
 #memory {
-    color: #bea4ff;
 }
 
 #disk {
     /* background-color: #964B00; */
 }
 
+
+/* ============================================================
+ * Backlight and temperature
+ * ============================================================ */
+
 #backlight {
-    color: #f3f385;
-}
-
-#network {
-    color: #76c9fc;
-}
-
-#custom-network {
-    color: #80d1f1;
-}
-
-#network.disconnected {
-    background-color: #f53c3c;
-}
-
-#custom-scratchpad-indicator {
-    color: #cccccc;
-}
-
-#pulseaudio {
-    color: #f9b168;
-}
-
-/*#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}*/
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
 }
 
 #temperature {
-    /*background-color: #f0932b;*/
+    /* background-color: #f0932b; */
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    background-color: @danger;
 }
 
+
+/* ============================================================
+ * Network
+ * ============================================================ */
+
+#network {
+    color: @blue;
+}
+
+#network.disconnected {
+    background-color: @battery-critical;
+}
+
+#custom-network {
+    color: @blue-light;
+}
+
+
+/* ============================================================
+ * Scratchpad
+ * ============================================================ */
+
+#custom-scratchpad-indicator {
+    padding: 0 .4rem;
+}
+
+
+/* ============================================================
+ * Audio and media
+ * ============================================================ */
+
+#pulseaudio {
+}
+
+#custom-media {
+}
+
+
+/* ============================================================
+ * System tray
+ * ============================================================ */
+
 #tray {
-    /*background-color: #2980b9;*/
-    margin-left: 5px; /* tray needs more margin */
+    background-color: @background-subtle;
+    padding: 0 5px;
+    margin-right: 5px;
 }
 
 #tray > .passive {
@@ -209,44 +335,57 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @danger;
 }
 
+
+/* ============================================================
+ * Idle inhibitor
+ * ============================================================ */
+
 #idle_inhibitor {
-    /*background-color: #2d3436;*/
-    color: #80b1b1;
 }
 
 #idle_inhibitor.activated {
-    color: #ff0000;
+    color: @idle;
 }
 
+
+/* ============================================================
+ * MPD
+ * ============================================================ */
+
 #mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: @green-dark;
+    color: @green-text;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    background-color: @battery-critical;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+    background-color: @neutral;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+    background-color: @green-muted;
 }
 
+
+/* ============================================================
+ * Keyboard
+ * ============================================================ */
+
 #language {
-    color: #ffffff;
+    color: @text-white;
     padding: 0px 0px 0px 5px;
     min-width: 16px;
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
+    background: @green;
+    color: @text-black;
     padding: 0 0px;
     min-width: 16px;
 }
@@ -256,17 +395,22 @@ label:focus {
 }
 
 #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+    background: @background-subtle;
 }
 
+
+/* ============================================================
+ * Custom modules
+ * ============================================================ */
+
 #custom-arch-updates {
-    color: #00cc00;
+    color: @success;
 }
 
 #custom-wvkbd-toggle.off {
-    color: #80b1b1;
+    color: @neutral;
 }
 
 #custom-wvkbd-toggle.on {
-    color: #dddddd;
+    color: @keyboard;
 }
