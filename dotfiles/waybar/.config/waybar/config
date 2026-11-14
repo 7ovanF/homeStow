@@ -114,7 +114,7 @@
             "running": "RUNNING",
             "paused": "PAUSE"
         },
-        "on-click": "waybar_timer increase 300 || waybar_timer new 5 'notify-send -u critical \"Time's up!\"'",
+        "on-click": "waybar_timer increase 300 || waybar_timer new 5 'notify-send -u critical \"Timeout!\"'",
         "on-click-middle": "waybar_timer cancel",
         "on-click-right": "waybar_timer togglepause",
     },
