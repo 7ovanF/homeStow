@@ -180,6 +180,14 @@ window#waybar.empty #window {
     color: @text-muted;
 }
 
+#custom-timer,
+#idle_inhibitor,
+#backlight,
+#pulseaudio,
+#cpu,
+#memory {
+    font-size: 12px;
+}
 
 /* ============================================================
  * Clock
@@ -231,6 +239,10 @@ window#waybar.empty #window {
 /* ============================================================
  * Battery conservation
  * ============================================================ */
+
+#custom-battery-conserve {
+    margin-left: 2px;
+}
 
 #custom-battery-conserve.off {
 }
