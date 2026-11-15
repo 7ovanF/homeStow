@@ -2,6 +2,7 @@
 	background-color: #14192570;
 	text-color:       #EFEFEF;
     font: "LiterationMono Nerd Font 10.5";
+    border-radius: 2px;
  
 	line-margin:     0;
 	line-padding:    0;
@@ -15,7 +16,6 @@ window {
 	width: 50ch;
 	border: 1px;
 	border-color: #2ecbd1;
-  border-radius: 0px;
 	orientation: horizontal;
 	children:	 [mainbox];
 }
