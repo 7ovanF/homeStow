@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+# Vibecoded by Perplexity and ChatGPT
+
+set -euo pipefail
+
+action="${1:-shift}"
+
+case "$action" in
+    play-pause)
+        playerctl play-pause
+        notif_action="Toggled track on"
+        ;;
+    shift)
+        if ! playerctld shift; then
+            echo "An error occurred with the playerctld daemon, perhaps run it first" >&2
+            exit 1
+        fi
+        notif_action="Pointing at"
+        sleep 0.05
+        ;;
+    previous)
+        playerctl previous
+        notif_action="Previous track on"
+        ;;
+    next)
+        playerctl next
+        notif_action="Next track on"
+        ;;
+    *)
+        echo "Usage: $0 {shift|previous|next}" >&2
+        exit 1
+        ;;
+esac
+
+# Read details from the active player.
+info="$(playerctl metadata \
+    --format '{{playerName}}|{{status}}|{{artist}}|{{title}}|{{album}}' \
+    2>/dev/null || true)"
+
+if [[ -z "$info" ]]; then
+    notify-send -a "Media" "No active player" \
+        "No MPRIS media player is available."
+    exit 0
+fi
+
+IFS='|' read -r player status artist title album <<< "$info"
+
+# Replace empty metadata fields.
+: "${player:=Unknown player}"
+: "${status:=Unknown status}"
+: "${artist:=Unknown artist}"
+: "${title:=Unknown title}"
+: "${album:=Unknown album}"
+
+# change title based on action
+case "$action" in
+    play-pause) 
+        notif_action="$status track";;
+    shift) notif_action="Pointing at $player";;
+    previous) notif_action="Previous track";;
+    next) notif_action="Next track";;
+esac
+
+notify-send \
+    -a "Media" \
+    -u low \
+    -t 2500 \
+    -h string:x-canonical-private-synchronous:mpris-notifier \
+    "$notif_action" \
+    "<b>$title</b>\n$artist — $album\nStatus: $status"

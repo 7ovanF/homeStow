@@ -187,6 +187,7 @@ window#waybar.empty #window {
 #cpu,
 #memory {
     font-size: 12px;
+    letter-spacing: 1px;
 }
 
 /* ============================================================

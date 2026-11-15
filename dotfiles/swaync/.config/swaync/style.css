@@ -29,7 +29,7 @@
   --border-subtle: 2px solid rgba(var(--accent-darker-rgb), 0.25);
 
   /* === Typography === */
-  --font-family: "0xProto Nerd Font Propo";
+  --font-family: "JetBrainsMono Nerd Font Propo";
   --font-size-body: 14px;
   --font-size-summary: 15px;
   --font-size-small: 11px;

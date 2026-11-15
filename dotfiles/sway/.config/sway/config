@@ -80,10 +80,6 @@ bindsym {
     $mod+Shift+e exec swaynag -t warning -m 'End sway?' -b 'Yes, exit sway' 'swaymsg exit'
 }
 
-set $ws1 = 3
-set $ws2 = 4
-set $swap = swap
-
 # === Workspace ===
 bindsym {
     # Window focus
@@ -191,7 +187,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # === Custom Programs ===
-# Specifically for wiremix
+# mpris (involves a wrapper script around playerctl and playerctld, vibecoded)
+exec playerctld
+bindsym $mod+p exec mpris-notifier play-pause
+bindsym $mod+shift+p exec mpris-notifier shift
+bindsym $mod+bracketleft exec mpris-notifier previous
+bindsym $mod+bracketright exec mpris-notifier next
+
+# Wiremix
 for_window [app_id="wiremix"] floating enable
 for_window [app_id="wiremix"] resize set width 800 height 500
 for_window [app_id="wiremix"] move position center
