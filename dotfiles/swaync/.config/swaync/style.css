@@ -50,7 +50,7 @@
 
 * {
   font-family: var(--font-family);
-  font-weight: bold;
+  font-weight: 550;
   font-size: var(--font-size-body);
   color: var(--text-primary);
   border-radius: var(--radius);
