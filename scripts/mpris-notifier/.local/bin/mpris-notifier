@@ -62,6 +62,7 @@ case "$action" in
 esac
 
 notify-send \
+    -e \
     -a "Media" \
     -u low \
     -t 2500 \

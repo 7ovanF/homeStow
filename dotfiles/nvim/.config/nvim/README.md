@@ -8,7 +8,9 @@
 
 # Docs
 K: see docs of thing on cursor
-<C-]>: go to definition (ctrl+click on vscode)
+<C-]>: go to definition (LSP reference) (ctrl+click on vscode)
+gd: go to definition (local)
+gD: go to definition (global)
 
 # Other actions
 gx: open link
