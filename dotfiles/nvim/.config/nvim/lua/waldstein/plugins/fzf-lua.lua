@@ -9,9 +9,8 @@ return {
   ---@diagnostic disable: missing-fields
   opts = {},
   ---@diagnostic enable: missing-fields
-  config = function ()
-    -- fzf files
-    vim.keymap.set("n", "<C-p>", "<cmd>FzfLua files<cr>", { desc = "Find files" })
-    vim.keymap.set("n", "<C-f>", "<cmd>FzfLua live_grep<cr>", { desc = "Grep" })
-  end
+  keys = {
+    { '<C-p>', '<cmd>FzfLua files<cr>', desc = 'Find files' },
+    { '<C-f>', '<cmd>FzfLua live_grep<cr>', desc = 'Grep' },
+  },
 }
