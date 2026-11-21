@@ -225,5 +225,4 @@ for_window [app_id="blueman-manager"] move position center
 exec waybar_timer serve
 
 # Include other default sawy modules
-include /etc/sway/config.d/*
-include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "$sway-config-home/config.d/*.conf")'
+include '$($sway-scripts-home/layered-include "$sway-config-home/config.d/*.conf")'

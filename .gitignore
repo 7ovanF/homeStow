@@ -3,3 +3,4 @@ dotfiles/clipse/.config/clipse/clipboard_history.json
 dotfiles/clipse/.config/clipse/tmp_files/
 dotfiles/zsh/.config/zsh/.zcompdump
 dotfiles/sway/.config/sway/config.d/99-wallpaper.conf
+dotfiles/nvim/.config/nvim/lazy-lock.json

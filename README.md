@@ -7,6 +7,7 @@ Contains some personal preferences & stuff I personally use, be sure to remove o
 
 ## First, importing submodules (if you use zsh, tmux, etc. which has plugins as submodules)
 ```bash
+git submodule init
 git submodule update
 ```
 
