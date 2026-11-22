@@ -46,6 +46,11 @@ source "$plugin_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$plugin_dir/zsh-z/zsh-z.plugin.zsh"
 source <(fzf --zsh)
 
+# fzf
+export FZF_COMPLETION_TRIGGER=''
+bindkey '^T' fzf-completion # now ctrl-T only autocompletes directories
+bindkey '^I' $fzf_default_completion # keep normal tab completion
+
 # Starship
 eval "$(starship init zsh)"
 
