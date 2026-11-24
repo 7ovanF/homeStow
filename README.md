@@ -5,6 +5,13 @@ Contains some personal preferences & stuff I personally use, be sure to remove o
 
 > If these dotfiles contain assets I haven't credited yet (I definitely copied some things blindly early on) let me know
 
+## Dependencies
+- Of course, programs referred to by each entry in the `dotfiles/` directory. Keep in mind that you only need to stow dotfiles you need.
+- Themes in `scripts/go-go-gadget-switch-gtk-theme/`, if you want to use it for some reason.
+
+#### `systemd` dependency
+For now, only `./dotfiles/sway/.config/sway/scripts/systemd/` (affecting the waybar tray; I haven't studied the cause) depends on systemd. I think. I've tested most other things in a `runit` system and they work.
+
 ## First, importing submodules (if you use zsh, tmux, etc. which has plugins as submodules)
 ```bash
 git submodule init

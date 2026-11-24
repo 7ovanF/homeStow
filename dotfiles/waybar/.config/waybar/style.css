@@ -73,17 +73,10 @@ window#waybar {
 
 /* flaunt the wallpaper to the world */
 window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.empty * {
-    color: @text-black;
-    background-color: transparent;
+    background-color: @background-hover;
 }
 window#waybar.empty #workspaces button.focused {
     background-color: @background-subtle;
-}
-window#waybar.empty #tray {
-    background-color: @background-hover;
 }
 
 

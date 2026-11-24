@@ -4,9 +4,11 @@ return {
     char = "│",
     virtcolumn = "101",
     highlight = "VirtColumn",
-    filetypes = { -- i think ai is hallucinating
+    exclude = {
+      filetypes = {
         "markdown",
         "txt",
-    },
+      },
+    }
   },
 }
